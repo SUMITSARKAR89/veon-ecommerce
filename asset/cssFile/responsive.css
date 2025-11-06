@@ -1,0 +1,103 @@
+:root{
+    --h1: 4.5rem;
+  --h2: 2.5rem;
+  --h3: 1.75rem;
+  --h4: 1.375rem;
+  --h5: 1.2rem;
+
+  --font-12: 0.75rem;
+  --font-14: 0.875rem;
+  --font-16: 1rem;
+}
+@media (max-width: 1280px){
+     :root {
+    --h1: 4rem;
+    --h2: 2.25rem;
+    --h3: 1.6rem;
+    --h4: 1.25rem;
+    --h5: 1.1rem;
+
+    --font-12: 0.7rem;
+    --font-14: 0.825rem;
+    --font-16: 0.95rem;
+  }
+
+}
+
+@media (max-width: 1199px){
+     :root {
+    --h1: 3.8rem;
+    --h2: 2.1rem;
+    --h3: 1.5rem;
+    --h4: 1.2rem;
+    --h5: 1rem;
+
+    --font-12: 0.7rem;
+    --font-14: 0.8rem;
+    --font-16: 0.95rem;
+  }
+
+}
+@media (max-width: 991px) {
+     :root {
+    --h1: 3.5rem;
+    --h2: 2rem;
+    --h3: 1.4rem;
+    --h4: 1.1rem;
+    --h5: 0.95rem;
+
+    --font-12: 0.65rem;
+    --font-14: 0.8rem;
+    --font-16: 0.9rem;
+  }
+  .offer-card,
+  .nav-card {
+    width: 600px;
+  }
+  nav .nav {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  .title-box{
+  margin-left: 50px;
+  
+ 
+}
+}
+@media (max-width: 768px) {
+    :root {
+    --h1: 3rem;
+    --h2: 1.8rem;
+    --h3: 1.25rem;
+    --h4: 1rem;
+    --h5: 0.9rem;
+
+    --font-12: 0.6rem;
+    --font-14: 0.75rem;
+    --font-16: 0.85rem;
+  }
+  .offer-card,
+  .nav-card {
+    width: 500px;
+  }
+  #heroSection .thumb img{
+    width: 100px;
+    height: 85px;
+  }
+  
+}
+@media (max-width: 480px){
+    :root {
+    --h1: 2.5rem;
+    --h2: 1.6rem;
+    --h3: 1.1rem;
+    --h4: 0.95rem;
+    --h5: 0.85rem;
+
+    --font-12: 0.55rem;
+    --font-14: 0.7rem;
+    --font-16: 0.8rem;
+  }
+}

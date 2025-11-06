@@ -42,6 +42,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!-- favicon section   --------------------------------->
     <link
@@ -62,9 +66,6 @@
       rel="stylesheet"
     />
 
-   
-   
-
     <!-- ---swiper js ---------------------------------->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  -->
     <!-- <link rel="stylesheet" href="swiper-bundle.min.css"> -->
@@ -76,66 +77,132 @@
     <title>Veon</title>
   </head>
   <body>
-    <div class="searchInput">
-         <input type="search" name="" placeholder="Search here..." id="srcInputBox">
-
-    </div>
-   
-      <!-- =============================================
+    <!-- =============================================
     ----==============header start here==============----
     ============================================= -->
     <header>
-        <div class="container">
-            <div class="offer-card">
-                <div class="offer-marque">
-                    <div class="offer-truck">
-                        <p class="f-12">free shipping in all order</p>
-                        <p class="f-12">free shipping in all order</p>
-                        <p class="f-12">free shipping in all order</p>
-                        <p class="f-12">free shipping in all order</p>
-                        <p class="f-12">free shipping in all order</p>
-                        <p class="f-12">free shipping in all order</p>
-                        <p class="f-12">free shipping in all order</p>
-                    </div>
-                </div>
-            </div> 
-            <div class="nav-card">
-                <div class="logo">
-                    <a href="index.html">VÉ<span>O</span>N</a>
-                </div>
-                <nav>
-                    <a href="shop.html" class="nav-link f-14">shop</a>
-                    <a href="about.html" class="nav-link f-14">about</a>
-                    <a href="contact.html" class="nav-link f-14">contact</a>
-                    <a href="favorite.html" class="nav-link f-14">favorite</a>
-                    <button class="nav-link f-14" style=" opacity: 1;" id="search">search</button>
-                    <div class="bag nav-link f-14" style="opacity: 1;">
-                        <p>bag</p>
-                        <span>0</span>
-                    </div>
-                    
-                </nav>
-                
-                
+      <div class="searchInput">
+        <input
+          type="search"
+          name=""
+          placeholder="Search here..."
+          id="srcInputBox"
+        />
+      </div>
+      <div class="container">
+        <div class="offer-card">
+          <div class="offer-marque">
+            <div class="offer-truck">
+              <p class="f-12">free shipping in all order</p>
+              <p class="f-12">free shipping in all order</p>
+              <p class="f-12">free shipping in all order</p>
+              <p class="f-12">free shipping in all order</p>
+              <p class="f-12">free shipping in all order</p>
+              <p class="f-12">free shipping in all order</p>
+              <p class="f-12">free shipping in all order</p>
             </div>
-            
+          </div>
         </div>
+
+        <div class="nav-card">
+          <div class="logo">
+            <a href="index.html">VÉ<span>O</span>N</a>
+          </div>
+          <nav>
+            <div id="menu">
+              <p class="f-14">menu</p>
+            </div>
+            <div class="nav">
+              <a href="shop.html" class="nav-link f-14">shop</a>
+              <a href="about.html" class="nav-link f-14">about</a>
+              <a href="contact.html" class="nav-link f-14">contact</a>
+              <a href="favorite.html" class="nav-link f-14">favorite</a>
+            </div>
+            <button class="nav-link f-14" style="opacity: 1" id="search">
+              search
+            </button>
+            <div class="bag nav-link f-14" style="opacity: 1">
+              <p>bag</p>
+              <span>0</span>
+            </div>
+            <div id="moodIcon">
+              <i class="ri-sun-fill sun"></i>
+              <i class="ri-moon-fill moon"></i>
+            </div>
+          </nav>
+        </div>
+        <div id="responsiveLink">
+          <div class="response-links">
+            <a href="index.html"
+              >home <i class="fa-solid fa-arrow-right"></i
+            ></a>
+            <a href="shop.html">shop <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="about.html"
+              >about <i class="fa-solid fa-arrow-right"></i
+            ></a>
+            <a href="contact.html"
+              >contact <i class="fa-solid fa-arrow-right"></i
+            ></a>
+            <a href="blog.html">blog <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="favorite.html"
+              >favorite <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <section id="heroSection">
+        
+        <div class="thumb">
+          <h1>Bold Layers, Confident Looks.</h1>
+         
+         
+          <div class="thumImg" id="thumImg">
+             <div class="indexNum" id="indexNum">01</div>
+            <img
+            src="asset/photos/bgImg (1).png"
+            data-bg="asset/photos/bgImg (1).png"
+            data-number="1"
+            data-title="Layer up with confidence and stylish all season"
+          />
+          <img
+            src="asset/photos/bgImg (2).png"
+            data-bg="asset/photos/bgImg (2).png"
+            data-number="2"
+            data-title="Find the perfect pair that moves with you"
+          />
+          <img
+            src="asset/photos/bgImg (3).png"
+            data-bg="asset/photos/bgImg (3).png"
+            data-number="3"
+            data-title="Upgrade your wardrobe with crisp, versatile Shirts"
+          />
+           <div class="title-box">
+            <p class="title" id="title">Layer up with confidence and stylish all season</p>
+            <a href="shop.html" class="btn primary-btn">Browse collection</a>
+          </div>
+          </div>
+        </div>
+      </section>
     </header>
-     <!-- =============================================
+    <div id="hero"></div>
+
+    <!-- =============================================
     ----==============main start here==============----
     ============================================= -->
-    <main>
 
+    <main>
+     <section>
+      
+     </section>
     </main>
-     <!-- =============================================
+
+    <!-- =============================================
     ----==============footer start here==============----
     ============================================= -->
     <footer>
 
     </footer>
 
-
     <script src="asset/jsFile/app.js"></script>
-
   </body>
 </html>
