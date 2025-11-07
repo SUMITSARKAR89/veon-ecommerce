@@ -60,7 +60,7 @@ window.addEventListener("scroll", () => {
 const thumImg = document.querySelectorAll("#thumImg img");
 const indexNum = document.getElementById("indexNum");
 const title = document.getElementById("title");
-const hero = document.getElementById("hero");
+const hero = document.querySelector("header");
 
 thumImg.forEach(img => {
   img.addEventListener('mouseover', ()=> {

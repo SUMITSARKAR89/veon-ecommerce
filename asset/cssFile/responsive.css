@@ -65,6 +65,13 @@
   
  
 }
+.shopContainer{
+  grid-template-columns: repeat(2, 1fr);
+}
+#styleContent .styleContainer{
+  flex-direction: column;
+  height: fit-content;
+}
 }
 @media (max-width: 768px) {
     :root {
@@ -86,6 +93,13 @@
     width: 100px;
     height: 85px;
   }
+  .shopContainer{
+  grid-template-columns: 1fr;
+}
+#styleContent .styleContainer{
+  flex-direction: column-reverse;
+  
+}
   
 }
 @media (max-width: 480px){
