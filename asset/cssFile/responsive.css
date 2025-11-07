@@ -36,6 +36,10 @@
     --font-14: 0.8rem;
     --font-16: 0.95rem;
   }
+  .customerContainer .customer-card{
+    padding: 
+    35px 25px;
+  }
 
 }
 @media (max-width: 991px) {
@@ -72,6 +76,11 @@
   flex-direction: column;
   height: fit-content;
 }
+.customerContainer, 
+#icon .icon-container{
+  grid-template-columns: repeat(2, 1fr);
+}
+
 }
 @media (max-width: 768px) {
     :root {
@@ -93,7 +102,9 @@
     width: 100px;
     height: 85px;
   }
-  .shopContainer{
+  .shopContainer,
+  .customerContainer, 
+  #icon .icon-container{
   grid-template-columns: 1fr;
 }
 #styleContent .styleContainer{

@@ -270,6 +270,7 @@ header::before {
   border-radius: 5px;
   filter: blur(0.2px);
 }
+
 .offer-marque {
   width: 100%;
   overflow: hidden;
@@ -611,6 +612,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  transition: var(--transition-1);
 
 }
 .shopContainer .shopCard{
@@ -824,6 +826,161 @@ main {
   width: 80%;
   margin-bottom: 15px;
 }
+
+/* -----------------------customer-------------  */
+#customer{
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  padding-top: 5%;
+}
+.cutomer-info{
+  max-width: 100%;
+  padding: 5px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.cutomer-info h2{
+  font-weight: 500;
+}
+.cutomer-info p{
+  width: 30%;
+  color: var(--blk2);
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.customerContainer{
+  max-width: 100%;
+  margin: 55px auto 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  transition: var(--transition-2);
+}
+.customerContainer .customer-card{
+  padding: 45px 35px;
+  background: var(--primaryColor);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  box-shadow: rgba(0, 0, 0, 0.116) 0px 3px 8px;
+}
+.customer-card img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.customer-card p{
+  line-height: 25px;
+  padding: 5px;
+}
+.customer-card h5{
+  font-weight: 500;
+  font-size: var(--font-16);
+}
+/* -----------------------icon-------------  */
+#icon, #img-marque{
+  width: 100%;
+  max-width: 100%;
+  margin-top: 5%;
+  position: relative;
+}
+#icon .icon-container{
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  transition: var(--transition-1);
+  margin-top: 5%;
+}
+.icon-container .iconCard{
+  width: 100%;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  background: var(--primaryColor);
+  border-radius: 8px;
+  transition: var(--transition-1);
+}
+.iconCard img{
+  width: 70px;
+}
+.iconCard h4{
+  font-weight: 500;
+}
+.iconCard p{
+  width: 90%;
+  font-size: var(--font-16);
+  margin: 5px auto;
+}
+
+/* -----------------------img marque-------------  */
+#img-marque a{
+  font-size: var(--h2);
+  width: fit-content;
+  text-transform: lowercase;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: var(--blk);
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+#img-marque a:hover{
+  color: var(--blk2);
+  opacity: 0.8;
+}
+.marquee{
+  max-width: 100%;
+  margin-top: 3%;
+}
+.img-marque{
+  width: 100%;
+  overflow: hidden;
+  padding: 2px;
+}
+.imgMarque-truck{
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: scroll 80s linear infinite;
+  transition: var(--transition-3);
+
+}
+.imgMarque-truck .marImg{
+  border: 1px solid transparent;
+  padding: 2px;
+  border-radius: 10px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.marImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.marImg.mi-1{
+  width: 250px;
+  height: 280px;
+
+}
+.marImg.mi-2{
+  width: 250px;
+  height: 400px;
+
+}
+
 
 /* <!-- =============================================
     ----==============footer start here==============----
