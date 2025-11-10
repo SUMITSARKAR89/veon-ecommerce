@@ -14,20 +14,21 @@ window.addEventListener("click", (e) => {
   searchArea.style.display = "none";
 });
 
-// ====================lightMood=================
-const sun = document.querySelector(".sun");
-const moon = document.querySelector(".moon");
+// ======================pop up body=====================
 
-sun.addEventListener("click", () => {
-  sun.style.display = "none";
-  moon.style.display = "block";
-  document.body.classList.remove("lightMood");
+const popCard = document.getElementById("popCard");
+const popClose = document.querySelector(".popClose");
+
+window.addEventListener("load", ()=> {
+  setTimeout(() => {
+    popCard.style.display = "block";
+  }, 5000);
 });
-moon.addEventListener("click", () => {
-  sun.style.display = "block";
-  moon.style.display = "none";
-  document.body.classList.add("lightMood");
+popClose.addEventListener("click", () => {
+  popCard.style.display = "none";
 });
+
+// ====================lightMood=================
 
 // ==============navigation bar======================
 
@@ -42,28 +43,31 @@ window.addEventListener("click", (e) => {
 });
 
 // ============scroll hide============
-
 const heroSection = document.querySelector("#heroSection");
-const thumb = document.querySelector(".thumb");
+      const thumb = document.querySelector(".thumb");
+      const clock = document.querySelector("#clock");
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
 
-  if (scrollY > heroSection.offsetHeight / 3) {
-    thumb.classList.add("hide");
-  } else {
-    thumb.classList.remove("hide");
-  }
-});
+        if (scrollY > heroSection.offsetHeight / 3) {
+          thumb.classList.add("hide");
+          clock.classList.remove("hide");
+        } else {
+          thumb.classList.remove("hide");
+          clock.classList.add("hide");
+        }
+      });
 
-// ==========================background change=================== 
+
+// ==========================background change===================
 const thumImg = document.querySelectorAll("#thumImg img");
 const indexNum = document.getElementById("indexNum");
 const title = document.getElementById("title");
 const hero = document.querySelector("header");
 
-thumImg.forEach(img => {
-  img.addEventListener('mouseover', ()=> {
+thumImg.forEach((img) => {
+  img.addEventListener("mouseover", () => {
     const bg = img.dataset.bg;
     const num = img.dataset.number;
     const txt = img.dataset.title;
@@ -71,6 +75,39 @@ thumImg.forEach(img => {
     hero.style.backgroundImage = `url('${bg}')`;
     indexNum.innerHTML = `0${num}`;
     title.innerHTML = txt;
-  })
-  
+  });
 });
+
+// ----------------clock----------------
+function updateClock() {
+  const i = new Date();
+  const monthName = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let day = i.getDate();
+  let month = monthName[i.getMonth()];
+  let year = i.getFullYear();
+  let hour = i.getHours();
+  let minute = i.getMinutes();
+  let second = i.getSeconds();
+
+  h = hour < 10 ? "0" + hour : hour;
+  m = minute < 10 ? "0" + minute : minute;
+  s = second < 10 ? "0" + second : second;
+
+  document.getElementById("time").innerHTML = `${h}:${m}:${s}`;
+  document.getElementById("date").innerHTML = `${day}th ${month}, ${year}`;
+}
+setInterval(updateClock, 1000);
+updateClock();

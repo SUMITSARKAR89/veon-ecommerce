@@ -37,8 +37,20 @@
     --font-16: 0.95rem;
   }
   .customerContainer .customer-card{
-    padding: 
-    35px 25px;
+    padding: 35px 25px;
+  }
+  .blogGuide-incard{
+    flex-direction: column;
+  }
+  .blogGuide-incard .incard-img,
+  .blogGuide-incard .incard-info{
+    width: 100%;
+  }
+  .incard-info .incard-down{
+    margin-top: 10%;
+  }
+  .blogGuide-container{
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
@@ -53,6 +65,9 @@
     --font-12: 0.65rem;
     --font-14: 0.8rem;
     --font-16: 0.9rem;
+  }
+  #clock{
+    display: none;
   }
   .offer-card,
   .nav-card {
@@ -69,7 +84,8 @@
   
  
 }
-.shopContainer{
+.shopContainer,
+.employee-container{
   grid-template-columns: repeat(2, 1fr);
 }
 #styleContent .styleContainer{
@@ -78,6 +94,9 @@
 }
 .customerContainer, 
 #icon .icon-container{
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer-container{
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -94,6 +113,13 @@
     --font-14: 0.75rem;
     --font-16: 0.85rem;
   }
+  .title-box{
+    position: absolute;
+    margin-left: 0;
+    bottom: -30%;
+    left: 15%;
+  }
+  
   .offer-card,
   .nav-card {
     width: 500px;
@@ -104,16 +130,42 @@
   }
   .shopContainer,
   .customerContainer, 
-  #icon .icon-container{
+  #icon .icon-container,
+   .blogGuide-container,
+   .employee-container{
   grid-template-columns: 1fr;
 }
 #styleContent .styleContainer{
   flex-direction: column-reverse;
   
 }
+.popCard-body{
+  max-width: 450px;
+  height: auto;
   
 }
-@media (max-width: 480px){
+.styleCard-info .popCard-sub{
+  flex-direction: column;
+}
+#foot .foot-social{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+#responsiveLink {
+  width: 90%;
+}
+.about-body p{
+  width: 50%;
+}
+.about-body .about-intro{
+  width: 80%;
+}
+  
+}
+@media (max-width: 520px){
     :root {
     --h1: 2.5rem;
     --h2: 1.6rem;
@@ -125,4 +177,38 @@
     --font-14: 0.7rem;
     --font-16: 0.8rem;
   }
+  .popCard-body{
+  max-width: 300px;
+  height: auto;
+  
+}
+#responsiveLink {
+  width: 85%;
+}
+.offer-card,
+.nav-card {
+  width: 380px;
+}
+.popCard-body .popCard-container{
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.popCard-sub input{
+ 
+  padding: 8px 10px;
+ 
+  
+}
+.popCard-container img,
+.popCard-info{
+  width: 100%;
+}
+.popCard-container img{
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+}
+.footer-container{
+  grid-template-columns: 1fr;
+}
+  
 }
