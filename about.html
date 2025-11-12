@@ -106,8 +106,9 @@
         <div class="nav">
           <a href="shop.html" class="nav-link f-14">shop</a>
           <a href="about.html" class="nav-link f-14">about</a>
+          <a href="blog.html" class="nav-link f-14">blog</a>
           <a href="contact.html" class="nav-link f-14">contact</a>
-          <a href="favorite.html" class="nav-link f-14">favorite</a>
+          <p class="nav-link f-14 fav">favorite</p>
         </div>
         <button class="nav-link f-14" style="opacity: 1" id="search">
           search
@@ -131,7 +132,7 @@
           >contact <i class="fa-solid fa-arrow-right"></i
         ></a>
         <a href="blog.html">blog <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="favorite.html"
+        <a href="" class="fav"
           >favorite <i class="fa-solid fa-arrow-right"></i
         ></a>
       </div>
@@ -205,8 +206,72 @@
           </div>
         </div>
       </section>
+      <!-- ---------------------proCard-----------------------  -->
+      <section id="prolingo">
+        <div class="container">
+          <div class="pro-container">
+            <div class="pro-card">
+              <div class="pro-card-content">
+                <div class="pro-content-info">
+                  <h2>The Timeless Elegance</h2>
+                  <p class="f-16">
+                    At Véon, we believe in fashion that transcends trends. Our
+                    designs are crafted with a focus on longevity, ensuring that
+                    every piece remains relevant and refined season after
+                    season.
+                  </p>
+                </div>
+                <div class="pro-img">
+                  <img
+                    src="https://framerusercontent.com/images/Z4PJc4aDwZgKtUbkxoYBzi2kc.png?width=1808&height=2400"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="pro-card">
+              <div class="pro-card-content">
+                <div class="pro-content-info">
+                  <h2>Impeccable Craftsmanship</h2>
+                  <p class="f-16">
+                    Quality is at the heart of everything we create. From fabric
+                    selection to intricate detailing, our commitment to
+                    precision and excellence guarantees garments that exude
+                    sophistication and durability.
+                  </p>
+                </div>
+                <div class="pro-img">
+                  <img
+                    src="https://framerusercontent.com/images/RPpGbRNLN272FSbhW100ZWFmFHs.png?width=1680&height=2400"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="pro-card">
+              <div class="pro-card-content">
+                <div class="pro-content-info">
+                  <h2>Effortless Confidence</h2>
+                  <p class="f-16">
+                    Style should feel as good as it looks. Véon’s collections
+                    are designed to empower, offering a seamless blend of
+                    comfort and luxury that allows you to move with confidence
+                    and grace.
+                  </p>
+                </div>
+                <div class="pro-img">
+                  <img
+                    src="https://framerusercontent.com/images/VpaTjeOIMCV4C8G5xj1zKGFqt8.png?scale-down-to=1024&width=1800&height=2400"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <!-- -----------------about------------------------  -->
+      <!-- -----------------employee------------------------  -->
       <section id="employee">
         <div class="container">
           <div class="styleCard-info">
@@ -307,7 +372,7 @@
                 </div>
               </div>
             </div>
-             <div class="employee-card">
+            <div class="employee-card">
               <img
                 src="https://framerusercontent.com/images/VpaTjeOIMCV4C8G5xj1zKGFqt8.png?scale-down-to=1024&width=1800&height=2400"
                 alt=""
@@ -471,7 +536,7 @@
             <a href="index.html" class="foot-link">about</a>
             <a href="index.html" class="foot-link">blogs</a>
             <a href="index.html" class="foot-link">contact</a>
-            <a href="index.html" class="foot-link">favorite</a>
+            <p class="foot-link fav">favorite</p>
             <p class="foot-link">FAQ</p>
           </div>
           <div class="foot-card">
@@ -504,7 +569,7 @@
       </div>
     </footer>
 
-    <script src="asset/jsFile/app.js"></script>
+    <!-- <script src="asset/jsFile/app.js"></script> -->
     <script>
       const sun = document.querySelector(".sun");
       const moon = document.querySelector(".moon");
@@ -518,6 +583,31 @@
         sun.style.display = "block";
         moon.style.display = "none";
         document.body.classList.add("lightMood");
+      });
+      // ==============navigation bar======================
+
+      const menu = document.getElementById("menu");
+      const responsiveLink = document.getElementById("responsiveLink");
+
+      menu.addEventListener("mouseover", () => {
+        responsiveLink.style.display = "block";
+      });
+      window.addEventListener("click", (e) => {
+        responsiveLink.style.display = "none";
+      });
+      const searchButton = document.getElementById("search");
+      const searchArea = document.querySelector(".searchInput");
+      const inputBox = document.getElementById("srcInputBox");
+
+      searchButton.addEventListener("click", () => {
+        searchArea.style.display = "flex";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === searchButton || e.target === inputBox) {
+          return;
+        }
+        searchArea.style.display = "none";
       });
     </script>
   </body>

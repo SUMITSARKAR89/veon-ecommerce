@@ -70,7 +70,8 @@
     display: none;
   }
   .offer-card,
-  .nav-card {
+  .nav-card,
+  #buttonGroup {
     width: 600px;
   }
   nav .nav {
@@ -121,7 +122,8 @@
   }
   
   .offer-card,
-  .nav-card {
+  .nav-card,
+  #buttonGroup {
     width: 500px;
   }
   #heroSection .thumb img{
@@ -163,6 +165,30 @@
 .about-body .about-intro{
   width: 80%;
 }
+.pro-card .pro-card-content {
+  width: 100%;
+  height: 690px;
+ display: flex;
+ flex-direction: column;
+  
+}
+.pro-card-content .pro-img {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+ 
+  
+}
+.contact-container{
+  flex-direction: column;
+}
+.contact-container .contact-card{
+  height: 80vh;
+}
+.contact-card img{
+  height: 100%;
+  object-fit: cover;
+}
   
 }
 @media (max-width: 520px){
@@ -186,7 +212,8 @@
   width: 85%;
 }
 .offer-card,
-.nav-card {
+.nav-card,
+#buttonGroup {
   width: 380px;
 }
 .popCard-body .popCard-container{
