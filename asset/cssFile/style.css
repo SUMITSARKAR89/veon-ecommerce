@@ -332,7 +332,8 @@ header::before {
   color: var(--blk2);
 }
 .nav-card,
-#buttonGroup {
+#buttonGroup,
+#shopBtnGroup {
   width: 700px;
   background: var(--primaryColor);
   max-width: 100%;
@@ -353,18 +354,7 @@ header::before {
   align-items: center;
   gap: 10px;
 }
-#buttonGroup {
-  top: 17%;
-  z-index: 9999;
-  border: 1px solid transparent;
-}
-#buttonGroup button {
-  cursor: pointer;
-  font-weight: 600;
-  text-transform: capitalize;
-  opacity: 0.5;
-  color: var(--blk);
-}
+
 
 .offer-card,
 .nav-card {
@@ -407,6 +397,11 @@ nav .bag {
   align-items: center;
   gap: 5px;
   color: var(--blk);
+  transition: var(--transition-2);
+}
+.bag:hover span{
+  background: var(--blk);
+  color: var(--wht);
 }
 .bag span {
   padding: 2px 5px;
@@ -414,6 +409,7 @@ nav .bag {
   background: var(--primaryColor);
   color: var(--redBg);
   border-radius: 50%;
+  transition: var(--transition-2);
 }
 nav .nav-link {
   color: var(--blk);
@@ -1654,19 +1650,43 @@ form .f-sub:hover {
 /* <!-- =============================================
     ----==============blog HTML start here==============----
     ============================================= --> */
+    #buttonGroup,
+    #shopBtnGroup {
+  top: 17%;
+  z-index: 9999;
+  border: 1px solid transparent;
+}
+#buttonGroup button,
+#shopBtnGroup button {
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+  opacity: 0.5;
+  color: var(--blk);
+}
 
-#blog-active {
+#blog-active,
+#shop-active {
   display: none;
 }
-#blog-active.active {
+#blog-active.active,
+#shop-active.active {
   display: grid;
   transition: var(--transition-2);
   animation: fadeed 0.5s ease-in-out;
 }
-#buttonGroup .blogBtn.active {
+#buttonGroup .blogBtn.active,
+#shopBtnGroup .shopBtn.active {
   opacity: 1;
 }
-#buttonGroup.hide {
+#buttonGroup.hide,
+#shopBtnGroup.hide {
   opacity: 0;
   visibility: hidden;
 }
+/* <!-- =============================================
+    ----==============shop HTML start here==============----
+    ============================================= --> */
+    #shopCard{
+      margin-top: 10%;
+    }
