@@ -95,6 +95,42 @@
         </div>
       </div>
     </div>
+    <div id="bagCard">
+      <div class="bagBody">
+        <div class="bag-header">
+          <p class="f-14"><span id="count">0</span> items in cart</p>
+          <i class="ri-close-line bagClose"></i>
+        </div>
+        <div class="bag-main"> <!--js-->
+          <!-- <div class="cart-box">         1-------js
+            <img src="asset/photos/imgA (1).png" alt="" class="cart-img" />
+            <div class="cart-details">
+              <h5 class="cart-details-name">model- V11</h5> 2-----------js
+              <span class="cart-price">$90</span>
+              <div class="cart-qty">     3----------js
+                <button id="minus">-</button>
+                <span class="number">1</span>
+                <button id="plus">+</button>
+              </div>
+            </div>
+            <i class="fa-regular fa-trash-can" id="card-remove"> </i>
+          </div> -->
+          <p class="alertTxt"></p>
+        </div>
+        <div class="bag-footer">
+          <div class="bag-foot-price">
+            <p class="f-14">SubTotal</p>
+            <p class="f-16" style="color: green">
+              $<span id="bag-price">0.00</span>
+            </p>
+          </div>
+          <div class="bag-btns">
+            <button id="checkOut">checkout</button>
+            <button id="clearCart">clear cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="nav-card">
       <div class="logo">
         <a href="index.html">VÉ<span>O</span>N</a>
@@ -115,7 +151,7 @@
         </button>
         <div class="bag nav-link f-14" style="opacity: 1">
           <p>bag</p>
-          <span>0</span>
+          <span id="cartCount">0</span>
         </div>
         <div id="moodIcon">
           <i class="ri-sun-fill sun"></i>
@@ -192,6 +228,7 @@
                 <p class="f-14">Véon Essential T-Shirt</p>
                 <p class="f-16">$60.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -217,6 +254,7 @@
                 <p class="f-14">Véon Checkered Zip Shirt</p>
                 <p class="f-16">$170.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="dress">
               <div class="shopCard-head">
@@ -242,6 +280,7 @@
                 <p class="f-14">Véon Scarlet Belted Dress</p>
                 <p class="f-16">$499.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="bottom">
               <div class="shopCard-head">
@@ -267,6 +306,7 @@
                 <p class="f-14">Véon Icon Track Pants</p>
                 <p class="f-16">$99.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="t-shirt">
               <div class="shopCard-head">
@@ -292,6 +332,7 @@
                 <p class="f-14">Véon Statement Slogan T-Shirt</p>
                 <p class="f-16">$70.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -317,6 +358,7 @@
                 <p class="f-14">Noir Poplin Blouse</p>
                 <p class="f-16">$190.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="knitwears">
               <div class="shopCard-head">
@@ -342,6 +384,7 @@
                 <p class="f-14">Axis Oblique Cardigan</p>
                 <p class="f-16">$299.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="t-shirt">
               <div class="shopCard-head">
@@ -367,6 +410,7 @@
                 <p class="f-14">Véon Retro Washed T-Shirt</p>
                 <p class="f-16">$65.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -392,6 +436,7 @@
                 <p class="f-14">Véon Esteva Striped Shirt</p>
                 <p class="f-16">$125.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="knitwears">
               <div class="shopCard-head">
@@ -417,6 +462,7 @@
                 <p class="f-14">Véon Cannage Cardigan</p>
                 <p class="f-16">$180.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="dress">
               <div class="shopCard-head">
@@ -442,6 +488,7 @@
                 <p class="f-14">Serene Mid-Length Dress</p>
                 <p class="f-16">$290.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="Jackets">
               <div class="shopCard-head">
@@ -467,6 +514,7 @@
                 <p class="f-14">Oblique Hooded Jacket</p>
                 <p class="f-16">$280.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="t-shirt">
               <div class="shopCard-head">
@@ -492,6 +540,7 @@
                 <p class="f-14">Textured T-Shirt</p>
                 <p class="f-16">$85.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="bottom">
               <div class="shopCard-head">
@@ -517,6 +566,7 @@
                 <p class="f-14">Véon Terrain Cargo</p>
                 <p class="f-16">$110.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="dress">
               <div class="shopCard-head">
@@ -542,6 +592,7 @@
                 <p class="f-14">Véon Aurelle Mid-Length Flared Dress</p>
                 <p class="f-16">$265.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="t-shirt">
               <div class="shopCard-head">
@@ -567,6 +618,7 @@
                 <p class="f-14">Polo Véon Icons</p>
                 <p class="f-16">$80.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="Jackets">
               <div class="shopCard-head">
@@ -592,6 +644,7 @@
                 <p class="f-14">Drift Oversized Hooded Jacket</p>
                 <p class="f-16">$340.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="knitwears">
               <div class="shopCard-head">
@@ -617,6 +670,7 @@
                 <p class="f-14">Véon Mariner Knit Sweater</p>
                 <p class="f-16">$190.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="bottom">
               <div class="shopCard-head">
@@ -642,6 +696,7 @@
                 <p class="f-14">Aure Flared Jeans</p>
                 <p class="f-16">$90.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="t-shirt">
               <div class="shopCard-head">
@@ -667,6 +722,7 @@
                 <p class="f-14">Polo Véon Icons</p>
                 <p class="f-16">$60.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="bottom">
               <div class="shopCard-head">
@@ -692,6 +748,7 @@
                 <p class="f-14">Véon Craft Jeans</p>
                 <p class="f-16">$165.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -717,6 +774,7 @@
                 <p class="f-14">HYLTON NEL Full /Half Sleeve Shirt</p>
                 <p class="f-16">$80.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="Jackets">
               <div class="shopCard-head">
@@ -742,6 +800,7 @@
                 <p class="f-14">Monarch Double-Breasted Jacket</p>
                 <p class="f-16">$380.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
           </div>
           <div class="shopContainer" id="shop-active">
@@ -769,6 +828,7 @@
                 <p class="f-14">Véon Essential T-Shirt</p>
                 <p class="f-16">$60.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
 
             <div class="shopCard" title="t-shirt">
@@ -795,6 +855,7 @@
                 <p class="f-14">Véon Statement Slogan T-Shirt</p>
                 <p class="f-16">$70.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
 
             <div class="shopCard" title="t-shirt">
@@ -821,6 +882,7 @@
                 <p class="f-14">Véon Retro Washed T-Shirt</p>
                 <p class="f-16">$65.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
 
             <div class="shopCard" title="t-shirt">
@@ -847,6 +909,7 @@
                 <p class="f-14">Textured T-Shirt</p>
                 <p class="f-16">$85.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
 
             <div class="shopCard" title="t-shirt">
@@ -873,6 +936,7 @@
                 <p class="f-14">Polo Véon Icons</p>
                 <p class="f-16">$80.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
 
             <div class="shopCard" title="t-shirt">
@@ -899,6 +963,7 @@
                 <p class="f-14">Polo Véon Icons</p>
                 <p class="f-16">$60.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
           </div>
           <div class="shopContainer" id="shop-active">
@@ -926,6 +991,7 @@
                 <p class="f-14">Véon Checkered Zip Shirt</p>
                 <p class="f-16">$170.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -951,6 +1017,7 @@
                 <p class="f-14">Noir Poplin Blouse</p>
                 <p class="f-16">$190.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -976,6 +1043,7 @@
                 <p class="f-14">Véon Esteva Striped Shirt</p>
                 <p class="f-16">$125.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -1001,6 +1069,7 @@
                 <p class="f-14">Textured T-Shirt</p>
                 <p class="f-16">$85.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="shirt">
               <div class="shopCard-head">
@@ -1026,6 +1095,7 @@
                 <p class="f-14">HYLTON NEL Full /Half Sleeve Shirt</p>
                 <p class="f-16">$80.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
           </div>
           <div class="shopContainer" id="shop-active">
@@ -1053,6 +1123,7 @@
                 <p class="f-14">Véon Scarlet Belted Dress</p>
                 <p class="f-16">$499.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="dress">
               <div class="shopCard-head">
@@ -1078,6 +1149,7 @@
                 <p class="f-14">Serene Mid-Length Dress</p>
                 <p class="f-16">$290.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="dress">
               <div class="shopCard-head">
@@ -1103,6 +1175,7 @@
                 <p class="f-14">Véon Aurelle Mid-Length Flared Dress</p>
                 <p class="f-16">$265.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
           </div>
           <div class="shopContainer" id="shop-active">
@@ -1130,6 +1203,7 @@
                 <p class="f-14">Véon Icon Track Pants</p>
                 <p class="f-16">$99.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="bottom">
               <div class="shopCard-head">
@@ -1155,6 +1229,7 @@
                 <p class="f-14">Aure Flared Jeans</p>
                 <p class="f-16">$90.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="bottom">
               <div class="shopCard-head">
@@ -1180,6 +1255,7 @@
                 <p class="f-14">Véon Terrain Cargo</p>
                 <p class="f-16">$110.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="bottom">
               <div class="shopCard-head">
@@ -1205,6 +1281,7 @@
                 <p class="f-14">Véon Craft Jeans</p>
                 <p class="f-16">$165.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
           </div>
           <div class="shopContainer" id="shop-active">
@@ -1232,6 +1309,7 @@
                 <p class="f-14">Axis Oblique Cardigan</p>
                 <p class="f-16">$299.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="knitwears">
               <div class="shopCard-head">
@@ -1257,6 +1335,7 @@
                 <p class="f-14">Véon Mariner Knit Sweater</p>
                 <p class="f-16">$190.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="knitwears">
               <div class="shopCard-head">
@@ -1282,6 +1361,7 @@
                 <p class="f-14">Véon Cannage Cardigan</p>
                 <p class="f-16">$180.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
           </div>
           <div class="shopContainer" id="shop-active">
@@ -1309,6 +1389,7 @@
                 <p class="f-14">Oblique Hooded Jacket</p>
                 <p class="f-16">$280.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="Jackets">
               <div class="shopCard-head">
@@ -1334,6 +1415,7 @@
                 <p class="f-14">Drift Oversized Hooded Jacket</p>
                 <p class="f-16">$340.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
             <div class="shopCard" title="Jackets">
               <div class="shopCard-head">
@@ -1359,6 +1441,7 @@
                 <p class="f-14">Monarch Double-Breasted Jacket</p>
                 <p class="f-16">$380.00 USD</p>
               </div>
+              <p id="buyBtn">buy now</p>
             </div>
           </div>
         </div>
@@ -1418,7 +1501,7 @@
       </div>
     </footer>
 
-    <!-- <script src="asset/jsFile/app.js"></script> -->
+    <script src="asset/jsFile/app.js"></script>
     <script>
       const sun = document.querySelector(".sun");
       const moon = document.querySelector(".moon");

@@ -95,6 +95,42 @@
         </div>
       </div>
     </div>
+   <div id="bagCard">
+      <div class="bagBody">
+        <div class="bag-header">
+          <p class="f-14"><span id="count">0</span> items in cart</p>
+          <i class="ri-close-line bagClose"></i>
+        </div>
+        <div class="bag-main"> <!--js-->
+          <!-- <div class="cart-box">         1-------js
+            <img src="asset/photos/imgA (1).png" alt="" class="cart-img" />
+            <div class="cart-details">
+              <h5 class="cart-details-name">model- V11</h5> 2-----------js
+              <span class="cart-price">$90</span>
+              <div class="cart-qty">     3----------js
+                <button id="minus">-</button>
+                <span class="number">1</span>
+                <button id="plus">+</button>
+              </div>
+            </div>
+            <i class="fa-regular fa-trash-can" id="card-remove"> </i>
+          </div> -->
+          <p class="alertTxt"></p>
+        </div>
+        <div class="bag-footer">
+          <div class="bag-foot-price">
+            <p class="f-14">SubTotal</p>
+            <p class="f-16" style="color: green">
+              $<span id="bag-price">0.00</span>
+            </p>
+          </div>
+          <div class="bag-btns">
+            <button id="checkOut">checkout</button>
+            <button id="clearCart">clear cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="nav-card">
       <div class="logo">
         <a href="index.html">VÉ<span>O</span>N</a>
@@ -115,7 +151,7 @@
         </button>
         <div class="bag nav-link f-14" style="opacity: 1">
           <p>bag</p>
-          <span>0</span>
+          <span id="cartCount">0</span>
         </div>
         <div id="moodIcon">
           <i class="ri-sun-fill sun"></i>
@@ -427,7 +463,7 @@
       </div>
     </footer>
 
-    <!-- <script src="asset/jsFile/app.js"></script> -->
+    <script src="asset/jsFile/app.js"></script>
     <script>
       const sun = document.querySelector(".sun");
       const moon = document.querySelector(".moon");

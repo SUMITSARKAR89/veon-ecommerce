@@ -95,34 +95,7 @@
         </div>
       </div>
     </div>
-    <div class="nav-card">
-      <div class="logo">
-        <a href="index.html">VÉ<span>O</span>N</a>
-      </div>
-      <nav>
-        <div id="menu">
-          <p class="f-14">menu</p>
-        </div>
-        <div class="nav">
-          <a href="shop.html" class="nav-link f-14">shop</a>
-          <a href="about.html" class="nav-link f-14">about</a>
-          <a href="blog.html" class="nav-link f-14">blog</a>
-          <a href="contact.html" class="nav-link f-14">contact</a>
-          <p class="nav-link f-14 fav">favorite</p>
-        </div>
-        <button class="nav-link f-14" style="opacity: 1" id="search">
-          search
-        </button>
-        <div class="bag nav-link f-14" style="opacity: 1">
-          <p>bag</p>
-          <span>0</span>
-        </div>
-        <div id="moodIcon">
-          <i class="ri-sun-fill sun"></i>
-          <i class="ri-moon-fill moon"></i>
-        </div>
-      </nav>
-    </div>
+    
     <div id="responsiveLink">
       <div class="response-links">
         <a href="index.html">home <i class="fa-solid fa-arrow-right"></i></a>
@@ -144,6 +117,70 @@
         placeholder="Search here..."
         id="srcInputBox"
       />
+    </div>
+    <div id="bagCard">
+      <div class="bagBody">
+        <div class="bag-header">
+          <p class="f-14"><span id="count">0</span> items in cart</p>
+          <i class="ri-close-line bagClose"></i>
+        </div>
+        <div class="bag-main"> <!--js-->
+          <!-- <div class="cart-box">         1-------js
+            <img src="asset/photos/imgA (1).png" alt="" class="cart-img" />
+            <div class="cart-details">
+              <h5 class="cart-details-name">model- V11</h5> 2-----------js
+              <span class="cart-price">$90</span>
+              <div class="cart-qty">     3----------js
+                <button id="minus">-</button>
+                <span class="number">1</span>
+                <button id="plus">+</button>
+              </div>
+            </div>
+            <i class="fa-regular fa-trash-can" id="card-remove"> </i>
+          </div> -->
+          <p class="alertTxt"></p>
+        </div>
+        <div class="bag-footer">
+          <div class="bag-foot-price">
+            <p class="f-14">SubTotal</p>
+            <p class="f-16" style="color: green">
+              $<span id="bag-price">0.00</span>
+            </p>
+          </div>
+          <div class="bag-btns">
+            <button id="checkOut">checkout</button>
+            <button id="clearCart">clear cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-card">
+      <div class="logo">
+        <a href="index.html">VÉ<span>O</span>N</a>
+      </div>
+      <nav>
+        <div id="menu">
+          <p class="f-14">menu</p>
+        </div>
+        <div class="nav">
+          <a href="shop.html" class="nav-link f-14">shop</a>
+          <a href="about.html" class="nav-link f-14">about</a>
+          <a href="blog.html" class="nav-link f-14">blog</a>
+          <a href="contact.html" class="nav-link f-14">contact</a>
+          <p class="nav-link f-14 fav">favorite</p>
+        </div>
+        <button class="nav-link f-14" style="opacity: 1" id="search">
+          search
+        </button>
+        <div class="bag nav-link f-14" style="opacity: 1">
+          <p>bag</p>
+          <span id="cartCount">0</span>
+        </div>
+        <div id="moodIcon">
+          <i class="ri-sun-fill sun"></i>
+          <i class="ri-moon-fill moon"></i>
+        </div>
+      </nav>
     </div>
 
     <div id="popCard">
@@ -230,7 +267,7 @@
             <a href="shop.html">view all</a>
           </div>
           <div class="shopContainer">
-            <div class="shopCard">
+            <div class="shopCard"><!-- js  -->
               <div class="shopCard-head">
                 <p class="badge f-14">best seller</p>
                 <div class="fav-icon">
@@ -251,10 +288,12 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Véon Mariner Knit Sweater</p>
-                <p class="f-16">$120.00 USD</p>
+                <p class="f-14 sc-title">Véon Mariner Knit Sweater</p>
+                <p class="f-16 sc-price">$120.00 USD</p>
               </div>
+              <p class="buyNow">buy now</p><!-- js  -->
             </div>
+            <!-- js  -->
             <div class="shopCard">
               <div class="shopCard-head">
                 <p class="badge f-14">best seller</p>
@@ -276,9 +315,10 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Noir Poplin Blouse</p>
-                <p class="f-16">$190.00 USD</p>
+                <p class="f-14 sc-title">Noir Poplin Blouse</p>
+                <p class="f-16 sc-price">$190.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
             </div>
             <div class="shopCard">
               <div class="shopCard-head">
@@ -301,9 +341,10 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Axis Oblique Cardigan</p>
-                <p class="f-16">$220.00 USD</p>
+                <p class="f-14 sc-title">Axis Oblique Cardigan</p>
+                <p class="f-16 sc-price">$220.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
             </div>
             <div class="shopCard">
               <div class="shopCard-head">
@@ -326,9 +367,10 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Véon Scarlet Belted Dress</p>
-                <p class="f-16">$450.00 USD</p>
+                <p class="f-14 sc-title">Véon Scarlet Belted Dress</p>
+                <p class="f-16 sc-price">$450.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
             </div>
             <div class="shopCard">
               <div class="shopCard-head">
@@ -351,9 +393,10 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Véon Statement Slogan T-Shirt</p>
-                <p class="f-16">$99.00 USD</p>
+                <p class="f-14 sc-title">Véon Statement Slogan T-Shirt</p>
+                <p class="f-16 sc-price">$99.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
             </div>
             <div class="shopCard">
               <div class="shopCard-head">
@@ -376,9 +419,10 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Drift Oversized Hooded Jacket</p>
-                <p class="f-16">$340.00 USD</p>
+                <p class="f-14 sc-title">Drift Oversized Hooded Jacket</p>
+                <p class="f-16 sc-price">$340.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
             </div>
           </div>
         </div>
@@ -406,7 +450,8 @@
             <a href="shop.html">view all</a>
           </div>
           <div class="shopContainer">
-            <div class="shopCard">
+            <div class="shopCard"><!--js-->
+              
               <div class="shopCard-head">
                 <p class="badge f-14">running</p>
                 <div class="fav-icon">
@@ -419,7 +464,7 @@
                   src="asset/photos/imgG (1).png"
                   alt="Véon Essential T-Shirt"
                   class="img-1"
-                />
+                /> <!--js-->
                 <img
                   src="asset/photos/imgG (2).png"
                   alt="Véon Essential T-Shirt"
@@ -427,9 +472,12 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Véon Essential T-Shirt</p>
-                <p class="f-16">$60.00 USD</p>
+                <p class="f-14 sc-title">Véon Essential T-Shirt</p><!--js-->
+                <p class="f-16 sc-price">$60.00 USD</p><!--js-->
               </div>
+               <p class="buyNow">buy now</p>
+              
+              
             </div>
             <div class="shopCard">
               <div class="shopCard-head">
@@ -452,9 +500,11 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Véon Essential T-Shirt</p>
-                <p class="f-16">$170.00 USD</p>
+                <p class="f-14 sc-title">Véon Essential T-Shirt</p>
+                <p class="f-16 sc-price">$170.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
+              
             </div>
             <div class="shopCard">
               <div class="shopCard-head">
@@ -477,9 +527,11 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Oblique Hooded Jacket</p>
-                <p class="f-16">$220.00 USD</p>
+                <p class="f-14 sc-title">Oblique Hooded Jacket</p>
+                <p class="f-16 sc-price">$220.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
+              
             </div>
             <div class="shopCard">
               <div class="shopCard-head">
@@ -503,9 +555,11 @@
                 />
               </div>
               <div class="shopCard-foot">
-                <p class="f-14">Véon Icon Track Pants</p>
-                <p class="f-16">$130.00 USD</p>
+                <p class="f-14 sc-title">Véon Icon Track Pants</p>
+                <p class="f-16 sc-price">$130.00 USD</p>
               </div>
+               <p class="buyNow">buy now</p>
+              
             </div>
           </div>
         </div>

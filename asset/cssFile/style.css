@@ -5,6 +5,7 @@
   --bodyColor: #070707;
   --cardColor: #0f0f0f;
   --redBg: #11bad8;
+  --buy: rgb(228, 214, 15);
 
   /* ---------------text-color-----------  */
   --blk: #ccc7c3;
@@ -25,6 +26,7 @@
   --bodyColor: #f8f8f8;
   --cardColor: #e6dfdf;
   --redBg: #e6394d;
+  --buy: rgb(4, 117, 42);
 
   --gradient-1: linear-gradient(180deg, #111111 0%, #d6cdcd 60%, #d6c8c3 100%);
   --gradient-2: linear-gradient(135deg, #232323 0%, #ffffff 100%);
@@ -227,6 +229,9 @@ button {
 ::-webkit-scrollbar {
   width: 5px;
 }
+.bag-main::-webkit-scrollbar{
+  width: 0;
+}
 
 ::-webkit-scrollbar-track {
   overflow: hidden;
@@ -358,7 +363,7 @@ header::before {
 
 .offer-card,
 .nav-card {
-  z-index: 9999;
+  z-index: 9998;
   backdrop-filter: blur(5px);
 }
 .nav-card .logo {
@@ -530,6 +535,7 @@ nav .nav-link:hover,
 
   display: none;
 }
+
 .searchInput input {
   position: absolute;
   top: 22%;
@@ -844,6 +850,24 @@ footer {
   text-transform: capitalize;
   color: var(--blk);
   font-weight: 600;
+}
+ .buyNow{
+  position: absolute;
+  bottom: 40px;
+  right: 18px;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition-1);
+  color: var(--wht);
+
+  width: fit-content;
+  background: var(--buy);
+  font-size: var(--font-12);
+  text-transform: capitalize;
+} 
+.buyNow:hover{
+  background: var(--redBg);
 }
 /* ---------------------story BG---------------  */
 #ourStorybg {
@@ -1690,3 +1714,258 @@ form .f-sub:hover {
     #shopCard{
       margin-top: 10%;
     }
+
+
+    /* <!-- =============================================
+    ----==============cart start here==============----
+    ============================================= --> */
+
+    #bagCard{
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #16161675;
+  z-index: 9999;
+  animation: fadeed 0.5s ease;
+   display: none;
+
+}
+#bagCard .bagBody{
+  position: absolute;
+  width: 400px;
+  max-width: 100%;
+  height: 90%;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  padding: 25px;
+  background: var(--wht);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bagBody .bag-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-radius: 1px;
+  position: relative;
+  border-bottom:1px solid  var(--blk);
+
+}
+.bag-header span,
+.bag-foot-price span{
+  font-weight: 800;
+  color: var(--redBg);
+}
+.bagBody .bagClose{
+  cursor: pointer;
+  transition: var(--transition-1);
+  font-size: var(--h4);
+  
+  
+}
+.bagBody .bagClose:hover{
+  transform: rotate(45deg);
+  color: red;
+}
+.bagBody .bag-footer{
+  width: 98%;
+  position: absolute;
+  bottom: 5px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 135px;
+  padding: 0 5px;
+  background: transparent;
+  border-top: 1px solid var(--blk2);
+ 
+  
+
+}
+.bag-footer .bag-foot-price{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+}
+.bag-foot-price p{
+  font-weight:700 ;
+}
+.bag-footer .bag-btns{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.bag-btns button{
+  padding: 11px 20px;
+  border: 1px solid var(--cardColor);
+  width: 100%;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: var(--font-16);
+  transition: var(--transition-2);
+}
+.bag-btns button:first-child{
+  background: var(--blk);
+  color: var(--wht);
+  
+}
+.bag-btns button:hover{
+  opacity: 0.9;
+}
+.bag-btns button:last-child{
+  background:var(--primaryColor) ;
+  color: rgb(235, 99, 99);
+}
+.bagBody .bag-main{
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+  height: 68%;
+}
+.bag-main .cart-box{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+     transition: var(--transition-2);
+     background: var(--bodyColor);
+     border: 1px solid #dfd7d744;
+     
+     
+     box-shadow: rgba(149, 157, 165, 0.075) 0px 8px 24px;
+   
+    animation: fade 0.5s ease-in-out;
+}
+.cart-box img{
+    max-width: 100%;
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 1%;
+    background: var(--cardColor);
+    padding: 3px;
+   
+
+}
+.cart-box .cart-details{
+    margin: 0 5px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2px;
+    cursor: pointer;
+    margin-left: 10px;
+   
+   
+}
+.cart-details .cart-details-name{
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--blk);
+  
+}
+.cart-details .cart-price{
+    font-size: var(--font-16);
+    font-weight: 500;
+    color: var(--blk);
+    opacity: 0.7;
+    transition: var(--transition-2);
+}
+.cart-box:hover .cart-price{
+    opacity: 1;
+}
+.cart-details .cart-qty{
+    width: 90px;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid var(--blk);
+    margin-top: 5px;
+}
+.cart-qty button{
+    background: transparent;
+    width: 30px;
+    margin: 0 auto;
+    font-weight: 600;
+    border: 0;
+    font-size: var(--font-16);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+   color: var(--blk);
+}
+.cart-qty button:hover{
+    opacity: 1;
+    background-color: var(--redBg);
+    color: var(--wht);
+}
+.cart-qty #minus{
+    
+    border-radius: 5px 0 0 5px;
+}
+.cart-qty #plus{
+  border-radius: 0 5px 5px 0;
+
+}
+.cart-qty .number{
+    max-width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--font-16);
+    font-weight: 600;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    cursor: default;
+    
+}
+ #card-remove{
+    font-size: var(--h4);
+    display: block;
+    margin-right: 4%;
+    cursor: pointer;
+    padding: 5px;
+    background-color: transparent;
+    color: rgb(235, 60, 60);
+     transform: scale(0.8);
+    
+    border-radius: 3px;
+    transition: var(--transition-2);
+}
+ #card-remove:hover{
+    transform: scale(1);
+
+}
+.alertTxt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: var(--h4);
+  color: var(--redBg);
+  font-weight: 800;
+  text-transform: capitalize;
+}
