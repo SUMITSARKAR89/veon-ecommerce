@@ -1941,7 +1941,7 @@ form .f-sub:hover {
     cursor: default;
     
 }
- #card-remove{
+ .card-remove{
     font-size: var(--h4);
     display: block;
     margin-right: 4%;
@@ -1954,18 +1954,45 @@ form .f-sub:hover {
     border-radius: 3px;
     transition: var(--transition-2);
 }
- #card-remove:hover{
+ .card-remove:hover{
     transform: scale(1);
 
 }
 .alertTxt{
-  position: absolute;
+  position: fixed;
   top: 50%;
-  left: 50%;
+  width: 300px;
+ right: 5%;
+  padding: 10px;
+  background: var(--primaryColor);
+  backdrop-filter: blur(5px);
   text-align: center;
-  transform: translate(-50%, -50%);
-  font-size: var(--h4);
+  transform: translateY(-50%);
+  
+  font-size: var(--font-14);
   color: var(--redBg);
-  font-weight: 800;
+  font-weight: 500;
+  z-index: 99999;
   text-transform: capitalize;
+  border-radius: 5px;
+  border: 1px solid var(--blk2);
+  display: none;
+ 
+}
+ .alert{
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  width: 300px;
+  transform: translateX(-50%);
+ padding: 8px 25px;
+ border-radius: 5px;
+ text-align: center;
+ font-weight: 600;
+ border: 1px solid var(--blk);
+  background: var(--wht);
+  color: var(--blk);
+  font-size: var(--font-14);
+  z-index: 9999;
+  transition: var(--transition-3);
 }
