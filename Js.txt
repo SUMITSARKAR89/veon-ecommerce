@@ -1,0 +1,179 @@
+document.addEventListener("DOMContentLoaded", ()=>{
+
+    p-1
+    // =================== Elements part 1 ===================
+
+
+    const bagCard = document.getElementById("bagCard");  
+    const bagClose = document.querySelector(".bagClose");  
+    const bagBtn = document.querySelector(".bag");  
+
+    bagBtn.onClick = () => bagCard.style.display = "block";
+    bagClose.onClick = () => bagCard.style.display = "none";
+
+
+
+
+    p-2
+    // =================== Elements part 2===================
+    
+    // 1. এখানে forEach ব্যবহার করে প্রতিটা বাটনের উপর কাজ করবে।
+    2. প্রতিটি বাটনে click event লাগানো হচ্ছে, e হলো event object (যেখানে ক্লিক করা হয়েছে তার তথ্য থাকে)
+    3. buyBtn বাটনে ক্লিক করলে তুমি ওই বাটনের ভেতরের DOM structure যাই হোক না কেন, সবসময় তার সবচেয়ে কাছে থাকা .shopCard এলিমেন্টটা পেতে চাও। 
+    4. যদি .shopCard পাওয়া না যায় → কোড এখানেই থেমে যায়।
+    5. যদি .shopCard পাওয়া যায় -> তাহলে  addToCart নামে নতুন ফাংশন রান হবে। // 
+
+    //======== Add to cart (from shopCard) =================
+
+    const buyBtn = document.querySelectorAll(".buyNow");
+    const bagMain = document.querySelector(".bag-main");
+    const alertB = document.querySelector(".alert"); 
+    bagBtn.forEach( (btn) => {
+        btn.addEventListener("click", (e)=> {
+            const SHOPCARD = e.target.closest(".shopCard"); 
+            if (!SHOPCARD) return;
+            addToCart(SHOPCARD); //------addToCart-------
+        })
+    });
+
+    // ---------------- addToCart ----------------
+    // 1. img, title, price যদি না থাকে, খালি string দেখাবে।
+    2. নতুন div বানাবো,
+            * একটা cart-box class নেব
+            * innerHTML নেব।
+            * i_img, i_title, i_price ডাটা দেখাবে
+    3.  cart এ থাকা সব item titles যদি একই থাকে,
+            * তাহলে alert দেখানো হবে "Already in CART"       
+    4. নতুন cart box কে bagMain (cart container) এর ভিতরে append করা হলো।
+    5. কার্ট বক্সের ভেতর .cart-qty জায়গায় ক্লিক হলে এই ফাংশন চালু হবে।
+            *এর ভেতর .number এলিমেন্ট এ- 
+                **.number এর ভেতরের টেক্সট নিয়ে qty ভ্যারিয়েবলে রাখছে।
+                **যদি .minus বাটনে ক্লিক করা হয় -> সেটার  qty ১ এর বেশি হলে qty কমাও (qty--);
+                **যদি .plus বাটনে ক্লিক করো qty এক বাড়বে (qty++)
+                **Qty এর নতুন সংখ্যা HTML-এ বসিয়ে দিচ্ছে
+    6. প্রতিটি cart box এ trash icon ক্লিক করলে cart box remove হবে। //
+
+    function addToCart(i){
+        const i_img = i.querySelector(.img).src || "";
+        const i_title = i.querySelector(.title).innerHTML || "";
+        const i_price = i.querySelector(.price).innerHTML || "";
+
+        //** create new cart box========**\\
+            const newCartBox = document.createElement("div");
+            newCartBox.classList.add("cart-box");
+            newCartBox.innerHTML = `
+            <img src="${i_imgSrc}" alt="" class="cart-img" />
+            <div class="cart-details">
+                <h5 class="cart-details-name">${i_title}</h5>
+                <span class="cart-price">${i_price}</span> 
+                <div class="cart-qty">
+                <button class="minus">-</button>
+                <span class="number">1</span>
+                <button class="plus">+</button>
+                </div>
+            </div>
+            <i class="fa-regular fa-trash-can card-remove"></i>
+            `;
+
+        //** create alert when double select same items===============**\\
+            const cartDetailsName = bagMain.querySelectorAll(".cart-details-name");
+            for(let a of cartDetailsName){
+                if(a.innerHTML === i_title){
+                    if(alertB){
+                        alertB.innerHTML = "Already in CART"
+                    } return;
+                };
+            };
+
+
+        bagMain.appendChild(newCartBox);
+
+        //** qty handler for this box ========**\\
+            newCartBox.querySelector(".cart-qty").addEventListener("click", (e)=>{
+                const number = newCartBox.querySelector(".number");
+                let qty = number.innerHTML;
+
+                if(e.target.classList.contains("minus")){
+                    if(qty > 1)
+                    qty--;
+                }else if(e.target.classList.contains("plus")){
+                    qty++;
+                }
+                number.innerHTML = qty;
+            });
+
+
+        //** create remove or trush ========**\\
+            newCartBox.querySelector(".card-remove").addEventListener("click", ()=> {
+                newCartBox.remove();
+            });
+
+    }
+
+
+ p-3
+    // =================== Elements part 3===================
+    1. এখানে price upadte function কল করা হবে
+        ** bagPrice যেখানে মোট দাম দেখাবে।
+        ** card-box যতগুলো প্রোডাক্ট আছে, প্রতিটা .cart-box এর মধ্যে থাকে।
+        ** total = মোট দামের হিসাব এখানে জমা হবে।
+        ** কার্টে যত আইটেম আছে, প্রতিটা একবার করে লুপে আসবে।
+            *** লুপের ভেতরে .cart-price → দাম .number → quantity থাকবে।
+            *** সব অ-সংখ্যা ফেলে দিয়ে এগুলো থেকে শুধু সংখ্যা বের করতে replace(/[^0-9.-]/g, "") অথবা null থাকবে
+            *** number গুলো string এ নিয়ে আসা হবে অথবা ০ থাকবে।
+            *** decimal(০-৯) সংখ্যায় যদি quantity পাওয়া যায় অথবা default 1 থাকবে।
+            *** product-এর price × quantity মোট total এ যোগ হবে।
+
+    // ================ update total price =================
+    function updateTotalPrice() {
+        const bagPrice = document.querySelector("#bag-price");
+        const cartBox = bagMain.querySelectorAll(".cart-box");
+            let total = 0;
+            cartBox.forEach((cb) => {
+            const priceElement = cb.querySelector(".cart-price");
+            const numberElement = cb.querySelector(".number");
+            const prices = (priceElement.textContent || "").replace(/[^0-9.-]/g, "");
+            const price = parseFloat(prices) || 0;
+            const qty = parseInt(numberElement.textContent, 10) || 1;
+            total += price * qty;
+            });
+        if (bagPrice) bagPrice.textContent = total.toFixed(2);
+  }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+const bagCard = document.getElementById("bagCard");  
+const bagClose = document.querySelector(".bagClose");  
+const bagBtn = document.querySelector(".bag");  
+
+const buyBtn = document.querySelectorAll(".buyNow");
+const bagMain = document.querySelector(".bag-main");
+
+const alertB = document.querySelector(".alert"); 
+
+
+=======addToCart
+const newCartBox = document.createElement("div");
+const cartDetailsName = bagMain.querySelectorAll(".cart-details-name");
+
+=======update price
+const bagPrice = document.querySelector("#bag-price");
+    const cartBox = bagMain.querySelectorAll(".cart-box");
