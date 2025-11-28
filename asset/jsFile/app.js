@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (el.textContent.trim() === i_title.trim()) {
         if (alertB) {
           alertB.innerHTML = "⚠️ Already in CART";
-          alertB.style.top = "20%";
+          alertB.style.top = "25%";
           alertB.style.color = "orange";
           setTimeout(() => {
             alertB.innerHTML = "";
             alertB.style.top = "-100%";
-          }, 2000);
+          }, 3000);
         }
         return;
       }
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cartItemCount) {
       cartItemCount.textContent = totalQty;
-      cartItemCount.style.visibility = totalQty > 0 ? "visible" : "hidden";
+      cartItemCount.style.visibility = totalQty > 0 ? "visible" : "0";
     }
     if (totalItems) {
       totalItems.textContent = totalQty;

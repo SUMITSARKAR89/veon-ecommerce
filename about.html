@@ -131,6 +131,12 @@
         </div>
       </div>
     </div>
+     <div id="fridayDeal">
+      <p class="f-12">Black Friday Deal</p>
+      <p class="f-12">Save 40% on every item</p>
+      <p class="f-16 d-btn"><a href="shop.html">BF40</a></p>
+      <i class="ri-close-line d-cls"></i>
+    </div>
     <div class="nav-card">
       <div class="logo">
         <a href="index.html">VÉ<span>O</span>N</a>
@@ -141,7 +147,7 @@
         </div>
         <div class="nav">
           <a href="shop.html" class="nav-link f-14">shop</a>
-          <a href="about.html" class="nav-link f-14">about</a>
+          <a href="about.html" class="nav-link f-14 active">about</a>
           <a href="blog.html" class="nav-link f-14">blog</a>
           <a href="contact.html" class="nav-link f-14">contact</a>
           <p class="nav-link f-14 fav">favorite</p>
@@ -569,9 +575,9 @@
           <div class="foot-card">
             <p class="f-14">NAVIGATION</p>
             <a href="index.html" class="foot-link">home</a>
-            <a href="index.html" class="foot-link">about</a>
-            <a href="index.html" class="foot-link">blogs</a>
-            <a href="index.html" class="foot-link">contact</a>
+            <a href="about.html" class="foot-link">about</a>
+            <a href="blog.html" class="foot-link">blogs</a>
+            <a href="contact.html" class="foot-link">contact</a>
             <p class="foot-link fav">favorite</p>
             <p class="foot-link">FAQ</p>
           </div>
@@ -587,11 +593,11 @@
           </div>
           <div class="foot-card">
             <p class="f-14">SUPPORT</p>
-            <p class="foot-link">payment methods</p>
-            <p class="foot-link">return & refunds</p>
-            <p class="foot-link">shipping & delivery</p>
-            <p class="foot-link">term & condition</p>
-            <p class="foot-link">privecy policy</p>
+            <a href="payment.html" class="foot-link">payment methods</a>
+            <a href="return.html" class="foot-link">return & refunds</a>
+            <a href="shipping.html" class="foot-link">shipping & delivery</a>
+            <a href="term.html" class="foot-link">term & condition</a>
+            <a href="privecy.html" class="foot-link">privecy policy</a>
           </div>
         </div>
         <div class="foot-social">
@@ -645,6 +651,11 @@
         }
         searchArea.style.display = "none";
       });
+       const fridayDeal = document.querySelector("#fridayDeal");
+      const dClose = document.querySelector(".d-cls");
+      
+      dClose.addEventListener("click", ()=> (fridayDeal.style.display = "none"));
+      
     </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
-    p-1
+ p-1
     // =================== Elements part 1 ===================
 
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 
-    p-2
+ p-2
     // =================== Elements part 2===================
     
     // 1. এখানে forEach ব্যবহার করে প্রতিটা বাটনের উপর কাজ করবে।
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 
     // ---------------- addToCart ----------------
-    // 1. img, title, price যদি না থাকে, খালি string দেখাবে।
+     1. img, title, price যদি না থাকে, খালি string দেখাবে।
     2. নতুন div বানাবো,
             * একটা cart-box class নেব
             * innerHTML নেব।
@@ -100,15 +100,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     qty++;
                 }
                 number.innerHTML = qty;
+                updateTotalPrice() ------ p3
             });
 
 
         //** create remove or trush ========**\\
             newCartBox.querySelector(".card-remove").addEventListener("click", ()=> {
                 newCartBox.remove();
+                updateTotalPrice() ------ p3
             });
 
-    }
+    };
 
 
  p-3
@@ -123,6 +125,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             *** number গুলো string এ নিয়ে আসা হবে অথবা ০ থাকবে।
             *** decimal(০-৯) সংখ্যায় যদি quantity পাওয়া যায় অথবা default 1 থাকবে।
             *** product-এর price × quantity মোট total এ যোগ হবে।
+            *** যদি bagPrice এলিমেন্ট থাকে: total কে দুই দশমিকসহ (যেমন: 120.00) দেখাবে।
 
     // ================ update total price =================
     function updateTotalPrice() {
@@ -130,22 +133,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
         const cartBox = bagMain.querySelectorAll(".cart-box");
             let total = 0;
             cartBox.forEach((cb) => {
-            const priceElement = cb.querySelector(".cart-price");
-            const numberElement = cb.querySelector(".number");
-            const prices = (priceElement.textContent || "").replace(/[^0-9.-]/g, "");
-            const price = parseFloat(prices) || 0;
-            const qty = parseInt(numberElement.textContent, 10) || 1;
+            const priceElement = cb.querySelector(".cart-price").textContent;
+            const numberElement = cb.querySelector(".number").textContent;
+            const prices = parseFloat(priceElement.replace(/[^0-9.-]/g, "")) || 0;
+            const qty = parseInt(numberElement, 10) || 1;
             total += price * qty;
             });
-        if (bagPrice) bagPrice.textContent = total.toFixed(2);
-  }
+            if (bagPrice){
+            bagPrice.textContent = total.toFixed(2);
+
+            } 
+  };
     
-
-
-
-
-
-
 
 
 

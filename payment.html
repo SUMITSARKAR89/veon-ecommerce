@@ -76,7 +76,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-    <title>Veon</title>
+    <title>Payment Methods</title>
   </head>
   <body>
     <!-- =============================================
@@ -95,13 +95,38 @@
         </div>
       </div>
     </div>
-   <div id="bagCard">
+
+    <div id="responsiveLink">
+      <div class="response-links">
+        <a href="index.html">home <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="shop.html">shop <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="about.html">about <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html"
+          >contact <i class="fa-solid fa-arrow-right"></i
+        ></a>
+        <a href="blog.html">blog <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="" class="fav"
+          >favorite <i class="fa-solid fa-arrow-right"></i
+        ></a>
+      </div>
+    </div>
+    <div class="searchInput">
+      <input
+        type="search"
+        name=""
+        placeholder="Search here..."
+        id="srcInputBox"
+      />
+    </div>
+
+    <div id="bagCard">
       <div class="bagBody">
         <div class="bag-header">
           <p class="f-14"><span id="count">0</span> items in cart</p>
           <i class="ri-close-line bagClose"></i>
         </div>
-        <div class="bag-main"> <!--js-->
+        <div class="bag-main">
+          <!--js-->
           <!-- <div class="cart-box">         1-------js
             <img src="asset/photos/imgA (1).png" alt="" class="cart-img" />
             <div class="cart-details">
@@ -113,9 +138,8 @@
                 <button id="plus">+</button>
               </div>
             </div>
-            <i class="fa-regular fa-trash-can" id="card-remove"> </i>
+            <i class="fa-regular fa-trash-can card-remove"> </i>
           </div> -->
-          <p class="alertTxt"></p>
         </div>
         <div class="bag-footer">
           <div class="bag-foot-price">
@@ -143,7 +167,7 @@
           <a href="shop.html" class="nav-link f-14">shop</a>
           <a href="about.html" class="nav-link f-14">about</a>
           <a href="blog.html" class="nav-link f-14">blog</a>
-          <a href="contact.html" class="nav-link f-14 active">contact</a>
+          <a href="contact.html" class="nav-link f-14">contact</a>
           <p class="nav-link f-14 fav">favorite</p>
         </div>
         <button class="nav-link f-14" style="opacity: 1" id="search">
@@ -159,261 +183,78 @@
         </div>
       </nav>
     </div>
-    <div id="responsiveLink">
-      <div class="response-links">
-        <a href="index.html">home <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="shop.html">shop <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="about.html">about <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="contact.html"
-          >contact <i class="fa-solid fa-arrow-right"></i
-        ></a>
-        <a href="blog.html">blog <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="" class="fav"
-          >favorite <i class="fa-solid fa-arrow-right"></i
-        ></a>
-      </div>
-    </div>
-    <div class="searchInput">
-      <input
-        type="search"
-        name=""
-        placeholder="Search here..."
-        id="srcInputBox"
-      />
-    </div>
-    <!-- <div id="popCard">
-      <div class="popCard-body">
-        <div class="popCard-container">
-          <img
-            src="https://framerusercontent.com/images/ft3yH73Sg2V4Z4r8EolG2MtubI.png?scale-down-to=1024&width=900&height=1200"
-            alt=""
-          />
-          <div class="popCard-info">
-            <div class="styleCard-info">
-              <p class="f-12">Welcome offer</p>
-              <h3>Sign up and get 20% off your first order</h3>
-              <div class="popCard-sub">
-                <input
-                  type="email"
-                  name=""
-                  id=""
-                  placeholder="your@email.com"
-                />
-                <input type="submit" value="Subscribe" />
-              </div>
-            </div>
-          </div>
-          <i class="ri-close-line popClose"></i>
-        </div>
-      </div>
-    </div>
-    <div id="clock">
+
+    <!-- <div id="clock">
       <div class="date" id="date">Jan,1 2024</div>
       <div class="time" id="time">00:00:00</div>
     </div> -->
-
-    <!-- =============================================
-    ----==============main start here==============----
-    ============================================= -->
-
-    <!--  -->
     <main>
-      <!-- ---------------------contact HTML------------------  -->
-      <section id="contact-body">
+      <section id="payment">
         <div class="container">
-          <div class="about-body">
-            <h1>Contact Us</h1>
+          <div class="cutomer-info" style="margin-top: 5%">
+            <h1 style="font-weight: 500">Payment Methods</h1>
+            <p class="f-16">Last Update: <b>March 24, 2025</b></p>
+          </div>
+        </div>
+        <div class="payment-card">
+          <p class="f-16">
+            At Véon, we offer secure and flexible payment options to ensure a
+            smooth shopping experience.
+          </p>
+
+          <div class="pay-cards">
+            <h3>Accepted Payment Methods</h3>
             <p class="f-16">
-              Have a question or need assistance? Reach out to us, and our team
-              will be happy to help
+              We accept the following payment methods for your convenience:
+            </p>
+            <ul>
+              <li class="f-16">
+                Credit & Debit Cards – Visa, MasterCard, American Express, and
+                Discover
+              </li>
+              <li class="f-16">
+                PayPal – Secure and fast checkout with your PayPal account
+              </li>
+              <li class="f-16">
+                Apple Pay & Google Pay – Quick payments using your mobile wallet
+              </li>
+              <li class="f-16">
+                Shop Pay – Fast and secure checkout with saved details
+              </li>
+              <li class="f-16">
+                Klarna & Afterpay (if applicable) – Buy now, pay later with
+                flexible installment options
+              </li>
+            </ul>
+          </div>
+          <div class="pay-cards">
+            <h3>Secure Transactions</h3>
+            <p class="f-16">
+              Your security is our priority. All payments are processed through
+              encrypted and trusted payment gateways to keep your information
+              safe.
             </p>
           </div>
-          <div class="contact-container">
-            <div class="contact-card">
-              <img
-                src="https://framerusercontent.com/images/gRSBGSXWhPEqDnyACmILu8KNZ6Q.png?scale-down-to=1024&width=896&height=1280"
-                alt=""
-              />
-            </div>
-            <div class="contact-card">
-              <form action="">
-                <div class="input-box">
-                  <input
-                    type="text"
-                    name="f-name"
-                    id=""
-                    placeholder="First Name*"
-                  />
-                  <input
-                    type="text"
-                    name="l-name"
-                    id=""
-                    placeholder="Last Name*"
-                  />
-                </div>
-                <input type="text" name="" id="" placeholder="Subject*" />
-                <div class="input-box">
-                  <input
-                    type="email"
-                    name="email"
-                    id="f-email"
-                    placeholder="Email*"
-                  />
-                  <input
-                    type="number"
-                    name="number"
-                    id=""
-                    placeholder="Phone"
-                  />
-                </div>
-                <input
-                  type="number"
-                  name=""
-                  id=""
-                  placeholder="Order Number*"
-                  min="0"
-                  step="1"
-                />
-                <textarea
-                  name=""
-                  id=""
-                  placeholder="Message"
-                  rows="7"
-                ></textarea>
-                <input type="submit" value="Send Message" class="f-sub" />
-              </form>
-            </div>
+          <div class="pay-cards">
+            <h3>Currency & International Payments</h3>
+            <p class="f-16">
+              We accept multiple currencies, and international transactions may
+              be subject to conversion rates. Your bank or provider may apply
+              additional fees.
+            </p>
+          </div>
+          <div class="pay-cards">
+            <h3>Need Help?</h3>
+            <p class="f-16">
+              If you have any payment-related questions or issues, feel free to
+              contact our support team. We're here to assist you!
+            </p>
           </div>
         </div>
       </section>
-
-      <!-- -----------------icon------------------------  -->
-      <section id="icon">
-        <div class="container">
-          <div class="cutomer-info">
-            <h2>Why Shop with Véon</h2>
-            <p class="f-16">
-              Enjoy exclusive benefits designed for a seamless shopping
-              experience
-            </p>
-          </div>
-          <div class="icon-container">
-            <div class="iconCard">
-              <img src="asset/photos/gif (1).gif" alt="" />
-              <h4>Free Shipping</h4>
-              <p class="f-14">Get your sunglasses in 4-7 business days.</p>
-            </div>
-            <div class="iconCard">
-              <img src="asset/photos/gif (4).gif" alt="" />
-              <h4>Here to help</h4>
-              <p class="f-14">
-                Customer service is available Monday through Friday.
-              </p>
-            </div>
-            <div class="iconCard">
-              <img src="asset/photos/gif (3).gif" alt="" />
-              <h4>Secure Payment</h4>
-              <p class="f-14">We keep your payment information safe.</p>
-            </div>
-            <div class="iconCard">
-              <img src="asset/photos/gif (2).gif" alt="" />
-              <h4>10-Days Return Policy</h4>
-              <p class="f-14">
-                We think you’ll love it. If you don’t, let us know!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- -----------------marquee------------------------  -->
-      <div id="img-marque">
-        <div class="cutomer-info">
-          <p class="f-12">Instagram</p>
-          <a href="www.instagram.com">@veonshop</a>
-        </div>
-        <div class="marquee">
-          <div class="img-marque">
-            <div class="imgMarque-truck">
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (1).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (1).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (2).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (2).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (3).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (3).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (4).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (4).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (5).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (6).jpeg" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (1).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (1).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (2).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (2).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (3).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (3).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (4).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (4).png" alt="" />
-              </div>
-
-              <div class="marImg mi-1">
-                <img src="asset/photos/marqueimg (5).jpeg" alt="" />
-              </div>
-              <div class="marImg mi-2">
-                <img src="asset/photos/marqueimg (6).jpeg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
 
-    <!-- =============================================
-    ----==============footer start here==============----
-    ============================================= -->
-   <footer>
+    <footer>
       <div id="foot">
         <div class="footer-container">
           <div class="foot-subs">
@@ -462,7 +303,6 @@
         </div>
       </div>
     </footer>
-
     <script src="asset/jsFile/app.js"></script>
     <script>
       const sun = document.querySelector(".sun");
@@ -478,6 +318,38 @@
         moon.style.display = "none";
         document.body.classList.add("lightMood");
       });
+      // =================search ==================
+      const searchButton = document.getElementById("search");
+      const searchArea = document.querySelector(".searchInput");
+      const inputBox = document.getElementById("srcInputBox");
+
+      searchButton.addEventListener("click", () => {
+        searchArea.style.display = "flex";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === searchButton || e.target === inputBox) {
+          return;
+        }
+        searchArea.style.display = "none";
+      });
+
+      // ======================pop up body=====================
+
+      const popCard = document.getElementById("popCard");
+      const popClose = document.querySelector(".popClose");
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          popCard.style.display = "block";
+        }, 5000);
+      });
+      popClose.addEventListener("click", () => {
+        popCard.style.display = "none";
+      });
+
+      // ====================lightMood=================
+
       // ==============navigation bar======================
 
       const menu = document.getElementById("menu");
@@ -489,20 +361,51 @@
       window.addEventListener("click", (e) => {
         responsiveLink.style.display = "none";
       });
-      const searchButton = document.getElementById("search");
-const searchArea = document.querySelector(".searchInput");
-const inputBox = document.getElementById("srcInputBox");
 
-searchButton.addEventListener("click", () => {
-  searchArea.style.display = "flex";
-});
+      // ============scroll hide============
+      const heroSection = document.querySelector("#heroSection");
+      const thumb = document.querySelector(".thumb");
+      const clock = document.querySelector("#clock");
 
-window.addEventListener("click", (e) => {
-  if (e.target === searchButton || e.target === inputBox) {
-    return;
-  }
-  searchArea.style.display = "none";
-});
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+
+        if (scrollY > heroSection.offsetHeight / 3) {
+          thumb.classList.add("hide");
+          clock.classList.remove("hide");
+        } else {
+          thumb.classList.remove("hide");
+          clock.classList.add("hide");
+        }
+      });
+
+      // ==========================background change===================
+      const thumImg = document.querySelectorAll("#thumImg img");
+      const indexNum = document.getElementById("indexNum");
+      const title = document.getElementById("title");
+      const hero = document.querySelector("header");
+
+      thumImg.forEach((img) => {
+        img.addEventListener("mouseover", () => {
+          const bg = img.dataset.bg;
+          const num = img.dataset.number;
+          const txt = img.dataset.title;
+
+          hero.style.backgroundImage = `url('${bg}')`;
+          indexNum.innerHTML = `0${num}`;
+          title.innerHTML = txt;
+        });
+      });
+
+      const fridayDeal = document.querySelector("#fridayDeal");
+      const dClose = document.querySelector(".d-cls");
+
+      dClose.addEventListener(
+        "click",
+        () => (fridayDeal.style.display = "none")
+      );
+
+      
     </script>
   </body>
 </html>

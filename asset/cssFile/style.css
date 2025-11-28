@@ -140,6 +140,7 @@ h2 {
 }
 h3 {
   font-size: var(--h3);
+  font-weight: 500;
 }
 h4 {
   font-size: var(--h4);
@@ -149,15 +150,20 @@ h5 {
 }
 p {
   font-size: var(--font-16);
+  font-weight: 500;
 }
 .f-12 {
   font-size: var(--font-12);
+  font-weight: 500;
 }
 .f-14 {
   font-size: var(--font-14);
+  font-weight: 500;
 }
 .f-16 {
   font-size: var(--font-16);
+  font-weight: 500;
+
 }
 button {
   border: 0;
@@ -219,6 +225,67 @@ button {
   transform: translateY(300px);
   transition: var(--transition-3);
   pointer-events: none;
+}
+#fridayDeal{
+  position: fixed;
+  z-index: 99999;
+  width: 145px;
+  height: auto;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  bottom: 10%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+#fridayDeal p{
+  text-align: center;
+}
+#fridayDeal p:nth-child(1){
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+#fridayDeal p:nth-child(2){
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+#fridayDeal .d-btn{
+  width: 80%;
+  display: block;
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: var(--transition-2);
+}
+.d-btn a{
+  color: #fff;
+}
+#fridayDeal .d-btn:hover{
+  width: 78%;
+}
+#fridayDeal .d-cls{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  text-align: center;
+  padding: 2px;
+  font-size: var(--font-12);
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  background: red;
+}
+#fridayDeal .d-cls:hover{
+  opacity: 0.8;
 }
 
 /* ==========================================================
@@ -362,7 +429,8 @@ header::before {
 
 
 .offer-card,
-.nav-card {
+.nav-card,
+#shopBtnGroup {
   z-index: 9998;
   backdrop-filter: blur(5px);
 }
@@ -395,6 +463,9 @@ a span {
 nav .nav {
   display: flex;
   gap: 12px;
+}
+.nav .active{
+  opacity: 0.7;
 }
 nav .bag {
   display: flex;
@@ -1727,7 +1798,7 @@ form .f-sub:hover {
   width: 100%;
   height: 100%;
   background: #16161675;
-  z-index: 9999;
+  z-index: 99999;
   animation: fadeed 0.5s ease;
    display: none;
 
@@ -1991,8 +2062,49 @@ form .f-sub:hover {
  font-weight: 600;
  border: 1px solid var(--blk);
   background: var(--wht);
+  
   color: var(--blk);
   font-size: var(--font-14);
   z-index: 9999;
   transition: var(--transition-3);
 }
+
+
+/* <!-- =============================================
+    ----==============payment start here==============----
+    ============================================= --> */
+    .payment-card{
+      padding: 40px 25px;
+      width: 55%;
+      margin: 2% auto;
+      border-radius: 10px;
+      background: var(--primaryColor);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      transition: var(--transition-2);
+      position: relative;
+
+    }
+    .payment-card .pay-cards{
+      padding: 5px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: var(--blk);
+    }
+    .pay-cards h3{
+      margin-bottom: 15px;
+      text-transform: capitalize;
+
+    }
+    .pay-cards ul{
+      padding-left: 18px;
+    }
+    .pay-cards ul li{
+      list-style: disc;
+      margin-top: 5px;
+    }
+    .pay-cards p{
+      line-height: 25px;
+    }

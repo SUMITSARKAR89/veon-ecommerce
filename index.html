@@ -95,6 +95,12 @@
         </div>
       </div>
     </div>
+    <div id="fridayDeal">
+      <p class="f-12">Black Friday Deal</p>
+      <p class="f-12">Save 40% on every item</p>
+      <p class="f-16 d-btn"><a href="shop.html">BF40</a></p>
+      <i class="ri-close-line d-cls"></i>
+    </div>
 
     <div id="responsiveLink">
       <div class="response-links">
@@ -167,7 +173,7 @@
           <p class="f-14">menu</p>
         </div>
         <div class="nav">
-          <a href="shop.html" class="nav-link f-14">shop</a>
+          <a href="shop.html" class="nav-link f-14 ">shop</a>
           <a href="about.html" class="nav-link f-14">about</a>
           <a href="blog.html" class="nav-link f-14">blog</a>
           <a href="contact.html" class="nav-link f-14">contact</a>
@@ -981,11 +987,11 @@
           </div>
           <div class="foot-card">
             <p class="f-14">SUPPORT</p>
-            <p class="foot-link">payment methods</p>
-            <p class="foot-link">return & refunds</p>
-            <p class="foot-link">shipping & delivery</p>
-            <p class="foot-link">term & condition</p>
-            <p class="foot-link">privecy policy</p>
+            <a href="payment.html" class="foot-link">payment methods</a>
+            <a href="return.html" class="foot-link">return & refunds</a>
+            <a href="shipping.html" class="foot-link">shipping & delivery</a>
+            <a href="term.html" class="foot-link">term & condition</a>
+            <a href="privecy.html" class="foot-link">privecy policy</a>
           </div>
         </div>
         <div class="foot-social">
@@ -1092,6 +1098,13 @@
           title.innerHTML = txt;
         });
       });
+
+     
+
+       const fridayDeal = document.querySelector("#fridayDeal");
+      const dClose = document.querySelector(".d-cls");
+      
+      dClose.addEventListener("click", ()=> (fridayDeal.style.display = "none"));
 
       // ----------------clock----------------
       function updateClock() {
