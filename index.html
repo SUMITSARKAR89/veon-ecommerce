@@ -173,7 +173,7 @@
           <p class="f-14">menu</p>
         </div>
         <div class="nav">
-          <a href="shop.html" class="nav-link f-14 ">shop</a>
+          <a href="shop.html" class="nav-link f-14">shop</a>
           <a href="about.html" class="nav-link f-14">about</a>
           <a href="blog.html" class="nav-link f-14">blog</a>
           <a href="contact.html" class="nav-link f-14">contact</a>
@@ -246,6 +246,12 @@
               <img
                 src="asset/photos/bgImg (3).png"
                 data-bg="asset/photos/bgImg (3).png"
+                data-number="3"
+                data-title="Upgrade your wardrobe with crisp, versatile Shirts"
+              />
+              <img
+                src="asset/photos/bgImg (4).png"
+                data-bg="asset/photos/bgImg (4).png"
                 data-number="3"
                 data-title="Upgrade your wardrobe with crisp, versatile Shirts"
               />
@@ -729,7 +735,7 @@
               >view all blogs</a
             >
           </div>
-          <div class="blogGuide-incard">
+          <div class="blogGuide-incard modalBlog" data-id="1">
             <div class="incard-img">
               <img
                 src="https://framerusercontent.com/images/rcXiZtNqHoedjSC5AcPtTkMgQcg.png?scale-down-to=1024"
@@ -756,7 +762,7 @@
             </div>
           </div>
           <div class="blogGuide-container">
-            <div class="blogGuide-card">
+            <div class="blogGuide-card modalBlog" data-id="2">
               <img
                 src="https://framerusercontent.com/images/NOUC6FkbvppmcZQpsbQqlG0ho.jpeg"
                 alt=""
@@ -779,7 +785,7 @@
                 </div>
               </div>
             </div>
-            <div class="blogGuide-card">
+            <div class="blogGuide-card modalBlog" data-id="3">
               <img
                 src="https://framerusercontent.com/images/aa32lCaCK2aKy0kk4bTKNiyEIlE.jpeg"
                 alt=""
@@ -802,7 +808,7 @@
                 </div>
               </div>
             </div>
-            <div class="blogGuide-card">
+            <div class="blogGuide-card modalBlog" data-id="4">
               <img
                 src="https://framerusercontent.com/images/OvEV8wbEcyZinA3tXgvBORGOnc.jpeg"
                 alt=""
@@ -951,6 +957,30 @@
         </div>
       </div>
     </main>
+    <!-- 🔥 Popup Modal Area -->
+    <div id="blogModal" class="blog-modal"> <!--js-->
+      <div class="blog-modal-content">
+        <span class="closeModal"><p>close</p></span><!--js-->
+        <div class="blog-modal-card">
+          <p id="modalCategory" class="modal-cat f-14"></p><!--js-->
+          <h3 id="modalTitle"></h3><!--js-->
+          <div class="modalTime">
+            <div id="modalDateTime" class="clender-badge">
+              <img src="asset/photos/in-icon (2).gif" alt="" />
+              <p id="modalCalender" class="f-14"></p><!--js-->
+            </div>
+            <div id="modalClockTime" class="time-badge">
+              <img src="asset/photos/in-icon (1).gif" alt="" />
+              <p id="modalClock" class="f-14"></p><!--js-->
+            </div>
+          </div>
+        </div>
+        <img id="modalImg" class="modal-img" /><!--js-->
+
+        <div id="modalDescription" class="modalDescription"></div><!--js-->
+      </div>
+    </div>
+    
 
     <!-- =============================================
     ----==============footer start here==============----
@@ -1007,6 +1037,334 @@
 
     <script src="asset/jsFile/app.js"></script>
     <script>
+      //-------------- modal blog catagories==================
+      const blogData = [
+        {
+          id: 1,
+          category: "Fashion Tips",
+          title: "Dressing for Your Body Type: Find the Perfect Fit with Véon",
+          date: "3/20/25 ",
+          time: " 7min",
+          img: "https://framerusercontent.com/images/rcXiZtNqHoedjSC5AcPtTkMgQcg.png?scale-down-to=1024",
+          descOne: `
+          <p class="f-16">
+            At Véon, we believe that fashion isn’t just about trends—it’s about
+            confidence, self-expression, and finding the perfect fit for your
+            unique body shape. Understanding your body type and dressing
+            accordingly can enhance your best features and elevate your personal
+            style. Whether you're curvy, petite, athletic, or somewhere in
+            between, this guide will help you choose flattering outfits that
+            make you feel your best.
+          </p>
+          <div class="modalDiv">
+            <h4>Identifying Your Body Shape</h4>
+            <p class="f-16">
+              Understanding your body shape is the first step in curating a
+              wardrobe that works for you. Whether your silhouette is naturally
+              balanced, curvy, or more angular, selecting well-tailored garments
+              can create harmony and highlight your best features. A
+              well-defined waist can be accentuated with structured fits, while
+              fluid fabrics can soften sharp lines, creating movement and
+              elegance. The right cuts and proportions bring out your natural
+              symmetry, allowing you to dress with ease and confidence.
+              <br /><br />Before diving into styling tips, it’s important to
+              determine your body shape. Here are the five most common body
+              types:
+            </p>
+            <ul>
+              <li>Hourglass: Balanced bust and hips with a defined waist.</li>
+              <li>Pear: Hips are wider than the bust.</li>
+              <li>Apple: Fuller midsection with slimmer legs.</li>
+              <li>Rectangle: Bust, waist, and hips are similar in width.</li>
+              <li>
+                Inverted Triangle: Broad shoulders with a narrower waist and
+                hips.
+              </li>
+            </ul>
+          </div>
+          <h3>Styling Tips for Every Body Type</h3>
+          <div class="modalDiv">
+            <h4>Hourglass Shape</h4>
+            <p class="f-16">
+              Emphasize your waist and enhance your balanced proportions.
+            </p>
+            <p>
+              ✔ Best Styles: Wrap dresses, fitted tops, high-waisted pants,
+              peplum tops.
+            </p>
+            <p>✖ Avoid: Oversized or boxy clothing that hides your curves.</p>
+          </div>
+          <div class="modalDiv">
+            <h4>Pear Shape</h4>
+            <p class="f-16">
+              Balance your proportions by drawing attention to your upper body.
+            </p>
+            <p>
+              ✔ Best Styles: A-line skirts, structured tops, boat necklines,
+              wide-leg pants.
+            </p>
+            <p>✖ Avoid: Tight skirts or pants that emphasize hip width.</p>
+          </div>
+          <div class="modalDiv">
+            <h4>Apple Shape</h4>
+            <p class="f-16">
+              Create definition at the waist and elongate your silhouette.
+            </p>
+            <p>
+              ✔ Best Styles: Empire-waist dresses, V-neck tops, flowy tunics,
+              straight-leg jeans.
+            </p>
+            <p>✖ Avoid: Clingy fabrics around the midsection.</p>
+          </div>
+          <div class="modalDiv">
+            <h4>Final Styling Tips from Véon</h4>
+
+            <ul>
+              <li>
+                Fit Matters: Clothes should skim, not squeeze your body.
+                Tailoring can make a huge difference.
+              </li>
+              <li>
+                Color & Patterns: Darker shades create a slimming effect, while
+                prints can highlight areas you want to accentuate.
+              </li>
+              <li>
+                Confidence is Key: No matter your body shape, the best outfit is
+                one that makes you feel amazing.
+              </li>
+            </ul>
+            <p class="f-16">
+              At Véon, we celebrate individuality, offering timeless and
+              versatile pieces that enhance your natural elegance. Dressing for
+              your body type isn’t about limitations—it’s about discovering
+              silhouettes that make you look and feel your best. With thoughtful
+              styling, confidence becomes the ultimate accessory, and every
+              outfit tells a story of effortless sophistication.
+            </p>
+          </div>
+          <a href="blog.html">View More</a>
+          
+          
+          `,
+        },
+        {
+          id: 2,
+          category: "Fashion Tips",
+          title: "How to Master the Art of Multi-Seasonal Dressing",
+          date: "3/28/25 ",
+          time: " 7min",
+          img: "https://framerusercontent.com/images/NOUC6FkbvppmcZQpsbQqlG0ho.jpeg",
+          descOne: `
+          <p class="f-16">
+            Layering isn’t just a winter hack — it’s a year-round style strategy that adds texture, functionality, and depth to your outfits. </br></br>
+            At Veon, we see layering as an art form: a balance of silhouette, fabric, and intention. And when done right, it transforms your wardrobe into a playground of endless combinations.
+          </p>
+          <div class="modalDiv">
+            <h4>Why Layering Matters</h4>
+           
+            <ul>
+              <li>Functionality: You stay comfortable as temperatures shift throughout the day.</li>
+              <li>Pear: Hips are wider than the bust.</li>
+              <li>Versatility: You get more wear out of each piece.</li>
+              <li>RStyle Impact: Layering adds movement, proportion, and visual interest — like a curated sculpture..</li>
+            </ul>
+          </div>
+          
+          <div class="modalDiv">
+            <h4>Foundational Pieces Every Layering Pro Needs</h4>
+             <ul>
+              <li>Fitted Base Tee or Tank: Your invisible support system.</li>
+              <li>Crisp Button-Down: Great for layering under knits or over dresses.</li>
+              <li>Lightweight Knit: Perfect middle layer for warmth and softness.</li>
+              <li>Structured Blazer or Overshirt: Adds polish without bulk.</li>
+              <li>Longline Coat or Duster: The final flourish. Think drama and movement.</li>
+            </ul>
+            
+          </div>
+          <div class="modalDiv">
+            <h3>Veon’s 3 Golden Layering Rules</h3>
+            <h4>1. Play with Proportion</h4>
+            <p class="f-16">
+              Pair slim-fitting bottoms with oversized outerwear. Or flowy skirts with cropped jackets. The magic is in the contrast.
+            </p>
+           <h4>2. Mind the Fabric Weight</h4>
+            <p class="f-16">
+              Start with light fabrics closest to the skin and build up to heavier layers. This keeps you mobile and avoids a bulky feel.
+            </p>
+             <h4>3. Stick to a Color Palette</h4>
+            <p class="f-16">
+              Neutrals are your best friends for cohesive layering. Introduce a pop of color or pattern with accessories or one bold layer.
+            </p>
+          </div>
+
+          <div class="modalDiv">
+            <h4>Bonus Tips</h4>
+            
+
+            <ul>
+              <li>
+                Use belts to cinch in oversized layers.
+              </li>
+              <li>
+                Drape a sweater over your shoulders for effortless chic.
+              </li>
+              <li>
+               Try layering dresses over pants — it’s bold, modern, and runway-approved.
+              </li>
+            </ul>
+            <p class="f-16">
+             Mastering layering doesn’t mean piling on clothes — it means building a look that evolves throughout the day.</br></br>
+             At Veon, we design with this philosophy in mind: every layer should have purpose and personality. </br></br>
+             Let your outfits tell a story — one layer at a time.
+            </p>
+          </div>
+          <a href="blog.html">View More</a>
+          
+          
+          `,
+        },
+        {
+          id: 3,
+          category: "Brand Stories",
+          title: "The Human Touch Behind Every Veon Piece",
+          date: "3/28/25 ",
+          time: " 8min",
+          img: "https://framerusercontent.com/images/aa32lCaCK2aKy0kk4bTKNiyEIlE.jpeg",
+          descOne: `
+          <p class="f-16">
+            When you buy a Veon piece, you're not just buying a garment — you're wearing a story. </br></br>
+            Behind every seam, stitch, and silhouette is a team of designers, tailors, pattern makers, and creatives who believe in one simple truth: <b>clothing should make you feel something.</b>
+          </p>
+          <div class="modalDiv">
+            <h4>The Quiet Craft of Our Team</h4>
+            <p class="f-16">
+           Every collection begins not with trends, but with questions:
+          </p>
+           
+            <ul>
+              <li>What kind of world are we designing for?</li>
+              <li>Will this still matter five years from now?</li>
+              <li>How can this piece empower someone?</li>
+              
+            </ul>
+            <p class="f-16">
+           We sketch, we source consciously, and we sew with precision. Our team works collaboratively to ensure each garment is as thoughtful as it is wearable.
+          </p>
+          </div>
+          
+          <div class="modalDiv">
+            <h4>Small Details. Big Intentions.</h4>
+             <p class="f-16">
+           You might notice a curved hem, a higher waistline, or a softer inner lining — these aren’t accidents. They’re choices. </br></br>
+            Whether it’s the way a coat drapes over your shoulders or how a blouse moves when you walk, we design with human motion and emotion in mind. </br></br>
+            Because what you wear should support you, not just style you.
+          </p>
+            
+          </div>
+          <div class="modalDiv">
+            <h3>Ethical Practices at the Core</h3>
+            
+            <p class="f-16">
+          We choose partners who uphold ethical labor, fair wages, and low-impact production methods. Our packaging is recyclable, our fabrics selected for longevity, and our values stitched into every label. </br></br>
+            Fashion, for us, is about conscious creation — not just consumption.</br></br>
+            When you wear Veon, you’re not wearing fast fashion. You’re wearing something that’s been cared for, from sketch to final press.</br></br>
+            This is the human side of our brand. And we're proud to bring it to your wardrobe.
+          </p>
+          </div>
+
+          
+          <a href="blog.html">View More</a>
+          
+          
+          `,
+        },
+        {
+          id: 4,
+          category: "Brand Stories",
+          title: "Why We Chose the Name Veon: Story Behind Brand",
+          date: "3/22/25 ",
+          time: " 5min",
+          img: "https://framerusercontent.com/images/OvEV8wbEcyZinA3tXgvBORGOnc.jpeg",
+          descOne: `
+          <p class="f-16">
+            A name holds power. It sets the tone, defines a vision, and often whispers the values of a brand long before a customer steps into a store or clicks “Add to Cart.” So why did we choose <b>Veon?</b> </br></br>
+           Let us take you behind the scenes of our journey.
+          </p>
+          <div class="modalDiv">
+            <h4>The Origins of Veon</h4>
+            <p class="f-16">
+          The idea of Veon was born not just from a love of fashion, but from the desire to <b>craft identity through style</b>. We didn’t want to just sell clothes — we wanted to empower people to express their inner essence outwardly.</br></br>
+          “Veon” is derived from the Latin root “veo” — a fictional creation inspired by words meaning “to see” or “to reveal.” It symbolizes clarity, presence, and transformation — all traits we believe fashion can bring into a person’s life.
+          </p>
+           
+          </div>
+          
+          <div class="modalDiv">
+            <h4>Our Vision</h4>
+             <p class="f-16">
+           At Veon, we focus on <b>timeless designs that speak louder than logos</b>. We're not trend-chasers. Instead, we offer wardrobe staples with elevated detailing — pieces that transcend seasons and speak to personality. </br></br>
+           Veon isn’t just a store. It’s a space for people who think beyond fast fashion, who dress to communicate, not conform.
+          </p>
+            
+          </div>
+          <div class="modalDiv">
+            <h3>Our Community</h3>
+            
+            <p class="f-16">
+          The Veon community is at the heart of everything. From our customer stories to behind-the-scenes clips of our shoots, we believe in connection over commerce.</br></br>
+            When someone wears Veon, they carry not just a product, but a philosophy — one that encourages intentional living, style evolution, and authenticity.</br></br>
+            We didn’t just pick a name. We built one that reflects who we are and who we want to be — clear, bold, modern, and expressive.</br></br>
+            Welcome to Veon. You don’t just wear us — you become.
+          </p>
+          </div>
+
+          
+          <a href="blog.html">View More</a>
+          
+          
+          `,
+        },
+      ];
+      const modalSec = document.querySelectorAll(".modalBlog");
+      const blogModal = document.getElementById("blogModal");
+      const closeModal = document.querySelector(".closeModal");
+
+      const modalImg = document.getElementById("modalImg");
+      const modalCategory = document.getElementById("modalCategory");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalCalender = document.getElementById("modalCalender");
+      const modalClock = document.getElementById("modalClock");
+      const modalDescription = document.getElementById("modalDescription");
+
+
+      modalSec.forEach(card =>{
+        card.addEventListener("click", () => {
+          const id = card.getAttribute("data-id");
+          const idBlog = blogData.find(a => a.id == id);
+
+          modalImg.src = idBlog.img;
+          modalCategory.innerHTML = idBlog.category;
+          modalTitle.innerHTML = idBlog.title;
+          modalCalender.innerHTML = idBlog.date;
+          modalClock.innerHTML = idBlog.time;
+          modalDescription.innerHTML = idBlog.descOne;
+
+          blogModal.style.display = "flex";
+
+        });
+      });
+      closeModal.addEventListener("click", () => {
+        blogModal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) =>{
+        if(e.target === blogModal){
+          blogModal.style.display = "none";
+        };
+      })
+
+      // ===============light mood============ 
+
       const sun = document.querySelector(".sun");
       const moon = document.querySelector(".moon");
 
@@ -1099,12 +1457,13 @@
         });
       });
 
-     
-
-       const fridayDeal = document.querySelector("#fridayDeal");
+      const fridayDeal = document.querySelector("#fridayDeal");
       const dClose = document.querySelector(".d-cls");
-      
-      dClose.addEventListener("click", ()=> (fridayDeal.style.display = "none"));
+
+      dClose.addEventListener(
+        "click",
+        () => (fridayDeal.style.display = "none")
+      );
 
       // ----------------clock----------------
       function updateClock() {
